@@ -1,0 +1,431 @@
+
+{% csrf_token %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Web Page Builder</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/web/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <div class="container-fluid pb-2" style="background: #572524;color: white;">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg" style="background: #572524;">
+                <div class="container-fluid">
+                    <a class="navbar-brand text-white text-uppercase fw-bold" href="/index/">Web Page Builder</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active text-white text-uppercase" aria-current="page"
+                                    href="/index/">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white text-uppercase ms-3" href="/Template/">Templates</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="/about/" class="nav-link text-white text-uppercase ms-3">About</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
+                            <li class="nav-item">
+                                <a class="nav-link text-white text-uppercase" href="/profile/" id="webProfile">Profile</a>
+                              </li>
+
+                         <li class="nav-item">
+                            <a class="nav-link text-white text-uppercase" href="/login/" id="webLogin">Log in</a>
+                          </li>
+
+                          <li class="nav-item">
+                            <a class="nav-link text-white text-uppercase" href="/logout/" id="webLogout">Log out</a>
+                          </li>
+
+                            <li class="nav-item">
+                                <!-- <a href="/Template/" class="nav-link text-dark text-uppercase  btn btn-light ms-3">get started</a> -->
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="container my-4">
+            <div class="row">
+                <div class="col my-5">
+                    <!-- <p class="text-white fw-bold">SELECT TEMPLATES TO BUILD YOUR NEXT PROJECT FASTER</p> -->
+                    <h1 class="text-white mb-3" style="font-size:40px">Select templates to build <br /> your next
+                        project faster.</h1>
+                    <p class="text-white fw-bold" style="font-size:18px">Just download a template and start
+                        customizing.<br /> It only takes seconds to style and add features.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid py-4">
+        <ul class="nav nav-pills" id="myTab" role="tablist">
+            <!-- <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist"> -->
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="all-tab" data-bs-toggle="tab" data-bs-target="#all-tab-pane"
+                    type="button" role="tab" aria-controls="all-tab-pane" aria-selected="true"
+                    style="font-size: 18px;">All templates</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="personal-tab" data-bs-toggle="tab" data-bs-target="#personal-tab-pane"
+                    type="button" role="tab" aria-controls="personal-tab-pane" aria-selected="false"
+                    style="font-size: 18px;">Personal</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="business-tab" data-bs-toggle="tab" data-bs-target="#business-tab-pane"
+                    type="button" role="tab" aria-controls="business-tab-pane" aria-selected="false"
+                    style="font-size: 18px;">Business</button>
+            </li>
+
+        </ul>
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="all-tab-pane" role="tabpanel" aria-labelledby="all-tab"
+                tabindex="0">
+                <div class="row px-5 pt-5 pb-3">
+                    <div class="col-md-6 col-sm-12 mb-3">
+                        <div class="card" style="width: 35rem;">
+                            <a href="#" class="template-thumb-link">
+                                <!-- <img src="images/personal.png" class="card-img-top" alt="..." style="height: 300px;"> -->
+                                <img src="/static/web/images/personal_website1.png" class="card-img-top" alt="...">
+                            </a>
+                            <div class="card-body d-flex justify-content-between">
+                                <div>
+                                    <p class="card-text">PORTFOLIO</p>
+                                </div>
+
+                                <div class="d-grid gap-2 d-md-block website-button">
+                                    <button class="btn btn-outline-primary" type="button">
+                                        <a href="/first_personal_website/">Start Designing</a>
+                                    </button>
+                                    <button class="btn btn-outline-primary" type="button">
+                                        <a href="/personal_website1_demo/" target="blank">View Demo</a>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-sm-12 mb-3">
+                        <div class="card" style="width: 35rem;">
+                            <a href="#" class="template-thumb-link">
+                                <img src="/static/web/images/personal_website2.png" class="card-img-top" alt="...">
+                            </a>
+                            <div class="card-body d-flex justify-content-between">
+                                <div>
+                                    <p class="card-text">RONIN</p>
+                                </div>
+
+                                <div class="d-grid gap-2 d-md-block website-button">
+                                    <button class="btn btn-outline-primary" type="button">
+                                        <a href="/second_personal_website" target="blank">Start Designing</a>
+                                    </button>
+                                    <button class="btn btn-outline-primary" type="button">
+                                        <a href="/personal_website2_demo/" target="blank">View Demo</a>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row px-5 pb-3">
+                    <div class="col-md-6 col-sm-12 mb-3">
+                        <div class="card" style="width: 35rem;">
+                            <a href="#" class="template-thumb-link">
+                                <img src="/static/web/images/business_website1.jpeg" class="card-img-top" alt="...">
+                            </a>
+                            <div class="card-body d-flex justify-content-between">
+                                <div>
+                                    <p class="card-text">INVEST PLUS</p>
+                                </div>
+
+                                <div class="d-grid gap-2 d-md-block website-button">
+                                    <button class="btn btn-outline-primary" type="button">
+                                        <a href="/first_business_website/">Start Designing</a>
+                                    </button>
+                                    <button class="btn btn-outline-primary" type="button">
+                                        <a href="/business_website1_demo/" target="blank">View Demo</a>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-sm-12 mb-3">
+                        <div class="card" style="width: 35rem;">
+                            <a href="#" class="template-thumb-link">
+                                <img src="/static/web/images/business_website2.jpeg" class="card-img-top" alt="...">
+                            </a>
+                            <div class="card-body d-flex justify-content-between">
+                                <div>
+                                    <p class="card-text">LEZO FINANCE</p>
+                                </div>
+
+                                <div class="d-grid gap-2 d-md-block website-button">
+                                    <button class="btn btn-outline-primary" type="button">
+                                        <a href="/second_business_website/">Start Designing</a>
+                                    </button>
+                                    <button class="btn btn-outline-primary" type="button">
+                                        <a href="/business_website2_demo/" target="blank">View Demo</a>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade" id="personal-tab-pane" role="tabpanel" aria-labelledby="personal-tab"
+                tabindex="0">
+                <div class="personal">
+                    <div class="row px-5 pt-5">
+                        <div class="col-md-6 col-sm-12 mb-3">
+                            <div class="card" style="width: 35rem;">
+                                <a href="#" class="template-thumb-link">
+                                    <img src="/static/web/images/personal_website1.png" class="card-img-top" alt="...">
+                                </a>
+                                <div class="card-body d-flex justify-content-between">
+                                    <div>
+                                        <p class="card-text">PORTFOLIO</p>
+                                    </div>
+
+                                    <div class="d-grid gap-2 d-md-block website-button">
+                                        <button class="btn btn-outline-primary" type="button">
+                                            <a href="/first_personal_website/">Start Designing</a>
+                                        </button>
+                                        <button class="btn btn-outline-primary" type="button">
+                                            <a href="/personal_website1_demo/" target="blank">View
+                                                Demo</a>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-sm-12 mb-3">
+                            <div class="card" style="width: 35rem;">
+                                <a href="#" class="template-thumb-link">
+                                    <img src="/static/web/images/personal_website2.png" class="card-img-top" alt="...">
+                                </a>
+                                <div class="card-body d-flex justify-content-between">
+                                    <div>
+                                        <p class="card-text">RONIN</p>
+                                    </div>
+
+                                    <div class="d-grid gap-2 d-md-block website-button">
+                                        <button class="btn btn-outline-primary" type="button">
+                                            <a href="/second_personal_website/">Start Designing</a>
+                                        </button>
+                                        <button class="btn btn-outline-primary" type="button">
+                                            <a href="/personal_website2_demo/" target="blank">View
+                                                Demo</a>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade" id="business-tab-pane" role="tabpanel" aria-labelledby="business-tab"
+                tabindex="0">
+                <div class="business">
+                    <div class="row px-5 pt-5">
+                        <div class="col-md-6 col-sm-12 mb-3">
+                            <div class="card" style="width: 35rem;">
+                                <a href="#" class="template-thumb-link">
+                                    <img src="/static/web/images/business_website1.jpeg" class="card-img-top" alt="...">
+                                </a>
+                                <div class="card-body d-flex justify-content-between">
+                                    <div>
+                                        <p class="card-text">INVEST PLUS</p>
+                                    </div>
+
+                                    <div class="d-grid gap-2 d-md-block website-button">
+                                        <button class="btn btn-outline-primary" type="button">
+                                            <a href="/first_business_website/">Start Designing</a>
+                                        </button>
+                                        <button class="btn btn-outline-primary" type="button">
+                                            <a href="/business_website1_demo/" target="blank">View
+                                                Demo</a>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-sm-12 mb-3">
+                            <div class="card" style="width: 35rem;">
+                                <a href="#" class="template-thumb-link">
+                                    <img src="/static/web/images/business_website2.jpeg" class="card-img-top" alt="...">
+                                </a>
+                                <div class="card-body d-flex justify-content-between">
+                                    <div>
+                                        <p class="card-text">LEZO FINANCE</p>
+                                    </div>
+
+                                    <div class="d-grid gap-2 d-md-block website-button">
+                                        <button class="btn btn-outline-primary" type="button">
+                                            <a href="/second_business_website/">Start Designing</a>
+                                        </button>
+                                        <button class="btn btn-outline-primary" type="button">
+                                            <a href="/business_website2_demo/" target="blank">View Demo</a>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!--  -->
+ <div class="container-fluid">
+    <!-- Footer -->
+    <footer class="text-center text-white" style="background-color: #572524">
+      <!-- Grid container -->
+      <div class="container-fluid">
+        <!-- Section: Links -->
+        <section class="mt-5" style="display:none">
+          <!-- Grid row-->
+          <div class="row text-center d-flex justify-content-center pt-5">
+            <!-- Grid column -->
+            <div class="col-md-2">
+              <h6 class="text-uppercase font-weight-bold">
+                <a href="#!" class="text-white">About us</a>
+              </h6>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-2">
+              <h6 class="text-uppercase font-weight-bold">
+                <a href="#!" class="text-white">Templates</a>
+              </h6>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-2">
+              <h6 class="text-uppercase font-weight-bold">
+                <a href="#!" class="text-white">Home</a>
+              </h6>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-2">
+              <h6 class="text-uppercase font-weight-bold">
+                <a href="#!" class="text-white">Resumes</a>
+              </h6>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-2">
+              <h6 class="text-uppercase font-weight-bold">
+                <a href="#!" class="text-white">Login</a>
+              </h6>
+            </div>
+            <!-- Grid column -->
+          </div>
+          <!-- Grid row-->
+        </section>
+        <!-- Section: Links -->
+
+        <hr class="my-5" />
+
+        <!-- Section: Text -->
+        <section class="">
+          <div class="row d-flex justify-content-center">
+            <div class="col-lg-8">
+              <p>
+              Easily print or send online
+              Create personalized cards for the people you care about.
+              Invitation Maker
+              Design beautiful invitations to download, print or send online (with RSVP) for free
+              </p>
+            </div>
+          </div>
+        </section>
+        <!-- Section: Text -->
+
+        <!-- Section: Social -->
+        <section class="text-center mb-5">
+          <a href="" class="text-white me-4">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="" class="text-white me-4">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="" class="text-white me-4">
+            <i class="fab fa-google"></i>
+          </a>
+          <a href="" class="text-white me-4">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="" class="text-white me-4">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="" class="text-white me-4">
+            <i class="fab fa-github"></i>
+          </a>
+        </section>
+        <!-- Section: Social -->
+      </div>
+      <!-- Grid container -->
+
+      <!-- Copyright -->
+      <div
+           class="text-center p-3"
+           style="background-color: rgba(0, 0, 0, 0.2)"
+           >
+        © 2022 Copyright:
+        <a class="text-white" href="/index/"
+           >Digital Card Generator</a
+          >
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+  </div>
+  <!-- End of .container -->
+    
+    
+      <script src="/static/web/js/script.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+
+    <script type="text/javascript" src="/static/web/js/checkSession.js"></script>
+
+</body>
+
+</html>

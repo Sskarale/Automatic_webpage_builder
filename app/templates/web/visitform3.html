@@ -1,0 +1,298 @@
+{% csrf_token %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Page Builder</title>
+    <link rel="stylesheet" href="/static/web/css/visit.css">
+    <link rel="stylesheet" href="/static/web/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+<input type="hidden" name="" id="visit1" value="visiting3">
+    <div class="container-fluid " style="background: #572524;color: white;">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg" style="background: #572524;">
+                <div class="container-fluid">
+                    <a class="navbar-brand text-white text-uppercase fw-bold" href="/index/">Page Builder</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active text-white text-uppercase" aria-current="page"
+                                    href="/index/">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white text-uppercase ms-3" href="/Template/">Templates</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link text-white text-uppercase ms-3" href="/about/">About</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
+                            <li class="nav-item">
+                                <a class="nav-link text-white text-uppercase" href="/login/">Log in</a>
+                            </li>
+
+                             <li class="nav-item">
+                <a class="nav-link text-white text-uppercase" href="/logout/">Log out</a>
+              </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link text-dark text-uppercase  btn btn-light ms-3" href="/Template/">get started</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- FORM START  -->
+    <div class="container">
+        <div class="row my-5">
+            <div class="col-sm-6 col-md-6 col-12 d-flex align-items-center html-content">
+                <!-- <img src="/static/web/images/card1.png" alt=""> -->
+                       <!-- SECOND CARD -->
+                 <div class="col-sm-6 col-12 col-md-6">
+                <div class="card">
+                    <div class="card-body3">
+                        <img class="img3" src="/static/web/images/logo2.png" alt="" style="width: 100px; height:120px" id="img-profile">
+                        <p class="text-center fw-bold">COMPANY NAME</p>
+                        <p class="my-5"> <i class="fas fa-user-tie"></i>
+                        <div class="my-5 name3">
+                            <h6 class="fw-bold text mx-4  " id="visitingName">John smith</h6>
+                        </div>
+                        </p>
+                    </div>
+                    <div class="bot">
+                        <div class="number card3 my-2">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h6 class="fs-6 " id="phone">+91 78497578585</h6>
+                                <h6 id="AlterNumber">+91 66488392939</h6>
+                            </div>
+                        </div>
+                        <div class="mail card3">
+                            <i class="fas fa-envelope-open"></i>
+                            <div>
+                                <p id="email">Johnsmith@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="address card3">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <p id="address">kade bazar Belagavi #201 </p>
+                            </div>
+                        </div>
+
+                    </div>
+                  
+                </div>
+            </div>
+
+           
+            </div>
+
+            <div class="col-sm-6 col-12" id="visitcard">
+                <form>
+                    <h4 class="text-center mb-4 vform ">Please fill details to design your visiting card</h4>
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6">
+                            <div class="mb-3">
+                                <label for="exampleInputName" class="form-label ">Name</label>
+                                <input type="Name" class="form-control" id="InputName" aria-describedby="">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label ">Email </label>
+                                <input type="email" class="form-control" id="InputEmail1"
+                                    aria-describedby="emailHelp">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6">
+                            <div class="mb-3">
+                                <label for="AlterNumber" class="form-label ">Mobile Number</label>
+                                <input type="AlterNumber" class="form-control" id="InputAlterNumber"
+                                    aria-describedby="" maxlength="10">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <div class="mb-3">
+                                <label for="AlterNumber" class="form-label ">Alternative Number</label>
+                                <input type="AlterNumber" class="form-control" id="InputAlterNumber1"
+                                    aria-describedby="" maxlength="10">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="uploadFile" class="form-label ">Upload Logo</label>
+                        <input type="file" class="form-control" id="InputUploadFile" aria-describedby="">
+                    </div>
+                    <div class="mb-3">
+                        <label for="address" class="">Address</label>
+                        <textarea class="form-control" rows="5" id="InputAddress" name="text"></textarea>
+                    </div>
+                    <div class="vbutton d-grid gp-3">
+                        <button type="submit" class="btn btn-outline-primary" id="btn_submit">Submit</button>
+
+                    </div>
+                </form>
+            </div>
+               <div class=" col-sm-6 col-12 downloadPdf" style="display:none;">
+                 <input type="button" id="btnExport" value="Download" / onclick="CreatePDFfromHTML()" class="btn btn-primary">
+            </div>
+            <div class="col-sm-6 col-12" id="visitpayment" style="display:none;">
+                <h1>Complete payment to Download visiting card</h1>
+                <button class="btn btn-primary" type="button" id="btnPayment">Complete Payment</button>
+
+            </div>
+           
+            
+        </div>
+    </div>
+
+    <!-- FOOTER START -->
+  <section class="footer mt-5">
+    <div class="container">
+      <footer class="py-5 ">
+        <div class="row">
+          <div class="col-2">
+            <h5 class="text-white">Get to know us</h5>
+            <ul class="nav flex-column mt-4">
+              <li class="nav-item mb-2"><a href="/index/" class="nav-link p-0 text-white">Home</a></li>
+              <li class="nav-item mb-2"><a href="/Template/" class="nav-link p-0 text-white">Templates</a>
+              </li>
+              <li class="nav-item mb-2"><a href="/about/" class="nav-link p-0 text-white">About Us</a></li>
+              <!-- <li class="nav-item mb-2"><a href="/contact/" class="nav-link p-0 text-white">Contact</a></li> -->
+              <!-- <li class="nav-item mb-2"><a href="/about/" class="nav-link p-0 text-white">About</a></li> -->
+            </ul>
+          </div>
+
+          <div class="col-2">
+            <h5 class="text-white">Templates</h5>
+            <ul class="nav flex-column mt-4">
+              <li class="nav-item mb-2"><a href="/websites/" class="nav-link p-0 text-white">Website Templates</a></li>
+              <li class="nav-item mb-2"><a href="/Visit-cards/" class="nav-link p-0 text-white">Visting Cards</a>
+              </li>
+              <li class="nav-item mb-2"><a href="/invitation/" class="nav-link p-0 text-white">Invitation Cards</a>
+              </li>
+
+            </ul>
+          </div>
+
+          <div class="col-2">
+            <h5 class="text-white">Start Designing</h5>
+            <ul class="nav flex-column mt-4">
+              <li class="nav-item mb-2"><a href="/websites/" class="nav-link p-0 text-white">Personal Websites</a></li>
+              <li class="nav-item mb-2"><a href="/Visit-Cards/" class="nav-link p-0 text-white">Business Websites</a>
+              </li>
+              <li class="nav-item mb-2"><a href="/Visit-Cards/" class="nav-link p-0 text-white">Visiting Cards</a>
+              </li>
+              <li class="nav-item mb-2"><a href="/invitation/" class="nav-link p-0 text-white">Invitation Cards</a>
+              </li>
+
+            </ul>
+          </div>
+
+          <div class="col-4 offset-1">
+            <form>
+              <h5 class="text-white">Subscribe to our newsletter</h5>
+              <p class="text-white">Monthly digest of whats new and exciting from us.</p>
+              <div class="d-flex w-100 gap-2">
+                <label for="newsletter1" class="visually-hidden">Email address</label>
+                <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+                <button class="btn btn-light" type="button">Subscribe</button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div class="d-flex justify-content-between py-4 my-4 border-top">
+          <p>© 2021 Company, Inc. All rights reserved.</p>
+          <ul class="list-unstyled d-flex">
+            <li class="ms-3"><a href="#" class="text-white"><i class="fa-brands fa-twitter fa-2x"></i></a>
+
+            <li class="ms-3"><a href="#" class="text-white"><i class="fa-brands fa-instagram fa-2x"></i></a>
+
+            <li class="ms-3"><a href="#" class="text-white"><i class="fa-brands fa-facebook fa-2x"></i></a>
+
+          </ul>
+        </div>
+
+        <!-- Back to top button -->
+        <button type="button" class="btn btn-danger btn-floating btn-lg" id="btn-back-to-top">
+          <i class="fas fa-arrow-up"></i>
+        </button>
+      </footer>
+
+    </div>
+  </section>
+  <!-- FOOTER END -->
+
+
+
+        <script src="/static/web/js/script.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+        <script src="/static/web/js/jsVisit2.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+        <script type="text/javascript" src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
+          <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+        <script type="text/javascript">
+            //Create PDf from HTML...
+
+            function CreatePDFfromHTML() {
+                var HTML_Width = $(".html-content").width();
+                var HTML_Height = $(".html-content").height();
+                var top_left_margin = 15;
+                var PDF_Width = HTML_Width + (top_left_margin * 2);
+                var PDF_Height = (PDF_Width * 1.5) + (top_left_margin * 2);
+                var canvas_image_width = HTML_Width;
+                var canvas_image_height = HTML_Height;
+
+                var totalPDFPages = Math.ceil(HTML_Height / PDF_Height) - 1;
+
+                html2canvas($(".html-content")[0]).then(function (canvas) {
+                    var imgData = canvas.toDataURL("image/jpeg", 1.0);
+                    var pdf = new jsPDF('p', 'pt', [PDF_Width, PDF_Height]);
+                    pdf.addImage(imgData, 'JPG', top_left_margin, top_left_margin, canvas_image_width, canvas_image_height);
+                    for (var i = 1; i <= totalPDFPages; i++) { 
+                        pdf.addPage(PDF_Width, PDF_Height);
+                        pdf.addImage(imgData, 'JPG', top_left_margin, -(PDF_Height*i)+(top_left_margin*4),canvas_image_width,canvas_image_height);
+                    }
+                    pdf.save("visiting card.pdf");
+                    $(".html-content").hide();
+                });
+            }
+           </script>
+
+    
+
+</body>
+
+</html>

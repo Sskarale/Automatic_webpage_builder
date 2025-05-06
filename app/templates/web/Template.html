@@ -1,0 +1,240 @@
+{% csrf_token %}
+  
+  <!doctype html>
+  <html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" href="Template.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  </head>
+
+  <body>
+
+    <div class="container-fluid pb-5" style="background: #572524;color: white;">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg" style="background: #572524;">
+          <div class="container-fluid">
+            <a class="navbar-brand text-white text-uppercase fw-bold" href="/index/"> Page Builder</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+              aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active text-white text-uppercase" aria-current="page" href="/index/">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white text-uppercase ms-3" href="/Template/">Templates</a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link text-white text-uppercase ms-3" href="/about/">About</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
+                  <li class="nav-item">
+                <a class="nav-link text-white text-uppercase" href="/profile/" id="webProfile">Profile</a>
+              </li>
+
+
+                 <li class="nav-item">
+                <a class="nav-link text-white text-uppercase" href="/login/" id="webLogin">Log in</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link text-white text-uppercase" href="/logout/" id="webLogout">Log out</a>
+              </li>
+
+                <li class="nav-item">
+                  <!-- <a class="nav-link text-dark text-uppercase  btn btn-light ms-3" href="/Template/">get started</a> -->
+                </li>
+              </ul>
+
+            </div>
+
+
+          </div>
+        </nav>
+      </div>
+      <!--  -->
+
+      <div class="container  ">
+        <div class="row">
+          <div class="col-md-6 ">
+            <h1 class="text-white fw-bold mt-4"style="font-size:40px">Choose Category</h1>
+            <p class="text-white fs-4 fw-bold" >To Get Started ...</p>
+          
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!--  -->
+  <div class="container-fluid">
+  <div class="row">
+    <div class="col-md-6 mx-auto">
+      <div class="card mx-2 my-3" style="width: 22rem;">
+    <a href="/websites/"><img src="/static/web/images/webs.jpg" class="card-img-top my-2" alt="..." style="height: 310px;"></a>
+    <div class="card-body">
+      <p class=" card-text  fw-bold fs-4">Websites Templates</p>
+    </div>
+  </div>
+</div>
+
+   <!--  <div class="col-md-4 card mx-2 my-3" style="width: 25rem;">
+      <a href="/Visit-cards/"><img src="/static/web/images/visiting-card.jpg" class="card-img-top my-2" alt="..."style="height: 310px;"></a>
+      <div class="card-body">
+        <p class="card-text fs-4 fw-bold ">Visiting Cards</p>
+      </div>
+    </div>
+
+    <div class="col-md-4 card mx-2 my-3" style="width: 25rem;">
+     <a href="/invitation/"><img src="/static/web/images/invitation.webp" class="card-img-top my-2" alt="..."style="height: 310px;"></a> 
+      <div class="card-body">
+        <p class="card-text fs-4 fw-bold">Invitation Cards</p>
+      </div>
+    </div>
+
+     <div class="col-md-4 col-sm-6 card mx-2 my-3" style="width: 25rem;">
+     <a href="/resumepage/"><img src="/static/web/images/resume.jpg" class="card-img-top my-2" alt="..."style="height: 310px;"></a> 
+      <div class="card-body">
+        <p class="card-text fs-4 fw-bold">Resumes</p>
+      </div>
+    </div> -->
+
+  </div>
+  </div>
+   
+
+   <!-- Remove the container if you want to extend the Footer to full width. -->
+  <div class="container-fluid">
+    <!-- Footer -->
+    <footer class="text-center text-white" style="background-color: #572524">
+      <!-- Grid container -->
+      <div class="container-fluid">
+        <!-- Section: Links -->
+        <section class="mt-5" style="display:none">
+          <!-- Grid row-->
+          <div class="row text-center d-flex justify-content-center pt-5">
+            <!-- Grid column -->
+            <div class="col-md-2">
+              <h6 class="text-uppercase font-weight-bold">
+                <a href="#!" class="text-white">About us</a>
+              </h6>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-2">
+              <h6 class="text-uppercase font-weight-bold">
+                <a href="#!" class="text-white">Templates</a>
+              </h6>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-2">
+              <h6 class="text-uppercase font-weight-bold">
+                <a href="#!" class="text-white">Home</a>
+              </h6>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-2">
+              <h6 class="text-uppercase font-weight-bold">
+                <a href="#!" class="text-white">Resumes</a>
+              </h6>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-2">
+              <h6 class="text-uppercase font-weight-bold">
+                <a href="#!" class="text-white">Login</a>
+              </h6>
+            </div>
+            <!-- Grid column -->
+          </div>
+          <!-- Grid row-->
+        </section>
+        <!-- Section: Links -->
+
+        <hr class="my-5" />
+
+               <!-- Section: Text -->
+               <section class="">
+                <div class="row d-flex justify-content-center">
+                  <div class="col-lg-8">
+                    <p>
+                      Easily print or send online
+                      Create personalized cards for the people you care about.
+                      Invitation Maker
+                      Design beautiful invitations to download, print or send online (with RSVP) for free
+                    </p>
+                  </div>
+                </div>
+              </section>
+              <!-- Section: Text -->
+      
+              <!-- Section: Social -->
+              <!-- <section class="text-center mb-5">
+                <a href="" class="text-white me-4">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="" class="text-white me-4">
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a href="" class="text-white me-4">
+                  <i class="fab fa-google"></i>
+                </a>
+                <a href="" class="text-white me-4">
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a href="" class="text-white me-4">
+                  <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="" class="text-white me-4">
+                  <i class="fab fa-github"></i>
+                </a>
+              </section> -->
+              <!-- Section: Social -->
+            </div>
+            <!-- Grid container -->
+      
+            <!-- Copyright -->
+            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+              © 2022 Copyright:
+              <a class="text-white" href="/index/">Online Automatic WebPage Builder</a>
+            </div>
+            <!-- Copyright -->
+          </footer>
+          <!-- Footer -->
+  </div>
+  <!-- End of .container -->
+    
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="/static/web/js/checkSession.js"></script>
+
+  </body>
+
+  </html>     

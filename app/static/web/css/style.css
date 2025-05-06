@@ -1,0 +1,212 @@
+
+/* website */
+.nav-pills{
+    border: 0;
+    justify-content: center;
+}
+.nav-pills .nav-link{
+    display: block;
+    padding: 0 30px;
+    background-color: white;
+    color: black;
+    height: 36px;
+    margin: 10px;
+    line-height: 34px;
+    font-weight: 500;
+    font-size: 2rem;
+    border: 1px solid rgb(247, 239, 239);
+    /* border-radius: 20px; */
+}
+
+.nav-pills .nav-link.active,
+ .nav-pills .show>.nav-link{
+    color: brown;
+    background-color: white!important;
+    border-bottom: 2px solid rgb(86, 86, 86);
+
+}
+
+.template-title a{
+    margin: 0 0 7px;
+    display: block;
+    color: black;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+.template-thumb-link{
+    position: relative;
+    display: block;
+    overflow: hidden;
+}
+.template-thumb-link img{
+    transition: all .5s ease-out 0s;
+}
+.template-thumb-link img:hover{
+    transform: scale(1.2);
+    opacity: 0.8;
+}
+
+.card-text{
+    font-size: 1.3rem;
+}
+
+.card .website-button a{
+    text-decoration: none;
+}
+
+.card .website-button button:hover a{
+    text-decoration: none;
+    color: white;
+}
+/* end */
+
+/* invitation */
+.invitation-card .card-design{
+    background-color: rgba(254, 246, 237, 0.951);
+    /* background-image: linear-gradient(#ffe69fc7, #c0a175); */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(68, 31, 31);
+}
+
+.invitation-card .card .inner-card-text{
+    font-family: cursive;
+    font-size: 30px;
+    color: rgb(92, 8, 8);
+}
+
+.invitation-card .card .inner-card-text .text{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 25px;
+}
+
+.invitation-card .invitation-card-design{
+    background-image: linear-gradient(#f9e6b5ea, #f0d9ba);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(68, 31, 31);
+}
+
+.invitation-card .invitation-card-design .inner-card-text{
+    font-family: cursive;
+    font-size: 30px;
+    color: #c37c1be8;
+}
+
+.invitation-card .invitation-card-design .design{
+    /* border-right: 2px solid rgb(233, 191, 52); */
+    border-right: 2px solid black;
+    border-left: 2px solid black;
+}
+/* .invitation-card .card .card-body .date{
+    border-left: 2px solid grey;
+    border-right: 2px solid grey;
+    padding: 10px;
+} */
+
+.invitation-card .invitation-design .lower-design{
+    position: relative;
+    /* bottom: 60px; */
+    right: 15px;
+    /* top: 20px; */
+}
+
+.invitation-card .invitation-design .design{
+    border-top: 2px solid #c0a175;
+    border-left: 2px solid #c0a175;
+    border-right: 2px solid #c0a175;
+}
+
+.invitation-button button{
+    border: 1px solid #b1595882;
+}
+
+.invitation-button button:hover{
+    background-color: #6a2424e9;
+    color: white;
+    border: none;
+}
+
+.invitation-button a{
+    text-decoration: none;
+}
+
+.invitation-button a button{
+    color: #572524;
+}
+
+/* Invitation form */
+.invitation-form button{
+    border: 1px solid #924f4ebc;
+    color: #572524;
+}
+
+.invitation-form button:hover{
+    background-color: #572524;
+    border: none;
+}
+.invitation-form h4{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+/* end */
+
+/*resume-card*/
+.resume-card .card-design{
+    background-color: lightgray;
+    /* background-image: linear-gradient(#ffe69fc7, #c0a175); */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(68, 31, 31);
+}
+.resume-button button:hover{
+    background-color: darkgrey;
+    color: white;
+    border: none;
+}
+
+
+
+
+
+/* Login */
+.link a{
+    text-decoration: none;
+    color: #572524;
+    font-weight: 500;
+}
+
+.link a:hover{
+    text-decoration: underline;
+    color: rgb(57, 37, 37);
+    /* color: black!important; */
+}
+.login .card{
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+}
+.login button{
+    border: 1px solid #572524;
+    color: #572524;
+}
+
+.login button:hover{
+    background: linear-gradient(#572524, #572524)!important;
+    border: none!important;
+    color: white;
+}
+
+/* end */
+
+/* Register */
+.register button{
+    border: 1px solid #572524;
+    color: #572524;
+}
+
+.register button:hover{
+    background: linear-gradient(#572524, #572524)!important;
+    border: none!important;
+    color: white;
+}
+/* end */

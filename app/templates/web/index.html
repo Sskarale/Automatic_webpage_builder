@@ -1,0 +1,317 @@
+{% csrf_token %}
+
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Page Builder</title>
+  <link rel="stylesheet" href="/static/web/css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+  <div class="container-fluid pb-5" style="background: #572524;color: white;">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg" style="background: #572524;">
+        <div class="container-fluid">
+          <a class="navbar-brand text-white text-uppercase fw-bold" href="/index/"> Page Builder</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-white text-uppercase" aria-current="page" href="/index/">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white text-uppercase ms-3" href="/Template/">Templates</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link text-white text-uppercase ms-3" href="/about/">About</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
+              <li class="nav-item">
+                <a class="nav-link text-white text-uppercase" href="/profile/" id="webProfile">Profile</a>
+              </li>
+              
+              <li class="nav-item">
+                <a class="nav-link text-white text-uppercase" href="/login/" id="webLogin">Log in</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link text-white text-uppercase" href="/logout/" id="webLogout">Log out</a>
+              </li>
+
+              <li class="nav-item">
+                <!-- <a class="nav-link text-dark text-uppercase  btn btn-light ms-3" href="/Template/">get started</a> -->
+              </li>
+            </ul>
+
+          </div>
+
+
+        </div>
+      </nav>
+    </div>
+
+    <div class="container my-5">
+      <div class="row">
+        <div class="col-md-6 my-5">
+          <p class="text-white fw-bold">CREATE YOUR DIGITAL CARD</p>
+          <h1 class="text-white mb-3" style="font-size:60px">The leader in <br>Card design.</h1>
+          <p class="text-white fw-bold">Stand out online with a professional Card, online store, or portfolio. With
+            Squarespace, you can turn any idea into a reality.</p>
+          <a href="/Template/">
+            <button type="button" class="btn btn-light text-uppercase">get started</button>
+          </a>
+
+        </div>
+        <div class="col-md-6">
+          <section>
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                  aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                  aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                  aria-label="Slide 3"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="/static/web/images/img.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="/static/web/images/img1.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="/static/web/images/img2.jpg" class="d-block w-100" alt="...">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+  <div class="container my-5">
+    <div class="row">
+      <div class="col-md-6">
+        <img src="/static/web/images/website.jpg" class="w-100">
+      </div>
+      <div class="col-md-6">
+        <h1>Brilliant web design, simplified</h1>
+        <p>   Our WebPage builder helps bring your unique vision to life—no design or code experience required. Create a
+          customizable, mobile-optimized Website within the hour. All you need to start is a domain name and a vision
+          for your Website . If you're building a small business card , online store, or otherwise, Website builder can
+          simplify the process.</p>
+
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container-fluid py-5 mb-5" style="background:#572524">
+    <h1 class="text-center text-white">Templates</h1>
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner w-75 mx-auto">
+        <div class="carousel-item active">
+          <div class="row">
+            <div class="col-md-6">
+              <img src="/static/web/images/website6.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="col-md-6">
+              <img src="/static/web/images/website7.jpg" class="d-block w-100" alt="...">
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="row">
+            <div class="col-md-6">
+              <img src="/static/web/images/website1.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="col-md-6">
+              <img src="/static/web/images/website2.jpg" class="d-block w-100" alt="...">
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="row">
+            <div class="col-md-6">
+              <img src="/static/web/images/website3.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="col-md-6">
+              <img src="/static/web/images/website4.jpg" class="d-block w-100" alt="...">
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev text-dark" type="button" data-bs-target="#carouselExampleControls"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next text-dark" type="button" data-bs-target="#carouselExampleControls"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+
+
+  <div class="container text-center">
+    <img src="/static/web/images/hand.jpg" style="height: 300px;width: 300px;">
+    <h1 style="font-size:40px">With Card Builder, you can<br> create and publish a <br>stunning card in under an
+      hour.</h1>
+  </div>
+
+
+  <!-- Remove the container if you want to extend the Footer to full width. -->
+  <div class="container-fluid">
+    <!-- Footer -->
+    <footer class="text-center text-white" style="background-color: #572524">
+      <!-- Grid container -->
+      <div class="container-fluid">
+        <!-- Section: Links -->
+        <section class="mt-5" style="display:none">
+          <!-- Grid row-->
+          <div class="row text-center d-flex justify-content-center pt-5">
+            <!-- Grid column -->
+            <div class="col-md-2">
+              <h6 class="text-uppercase font-weight-bold">
+                <a href="#!" class="text-white">About us</a>
+              </h6>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-2">
+              <h6 class="text-uppercase font-weight-bold">
+                <a href="#!" class="text-white">Templates</a>
+              </h6>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-2">
+              <h6 class="text-uppercase font-weight-bold">
+                <a href="#!" class="text-white">Home</a>
+              </h6>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-2">
+              <h6 class="text-uppercase font-weight-bold">
+                <a href="#!" class="text-white">Resumes</a>
+              </h6>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-2">
+              <h6 class="text-uppercase font-weight-bold">
+                <a href="#!" class="text-white">Login</a>
+              </h6>
+            </div>
+            <!-- Grid column -->
+          </div>
+          <!-- Grid row-->
+        </section>
+        <!-- Section: Links -->
+
+        <hr class="my-5" />
+
+        <!-- Section: Text -->
+        <section class="">
+          <div class="row d-flex justify-content-center">
+            <div class="col-lg-8">
+              <p>
+                Easily print or send online
+                Create personalized cards for the people you care about.
+                Invitation Maker
+                Design beautiful invitations to download, print or send online (with RSVP) for free
+              </p>
+            </div>
+          </div>
+        </section>
+        <!-- Section: Text -->
+
+        <!-- Section: Social -->
+        <!-- <section class="text-center mb-5">
+          <a href="" class="text-white me-4">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="" class="text-white me-4">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="" class="text-white me-4">
+            <i class="fab fa-google"></i>
+          </a>
+          <a href="" class="text-white me-4">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="" class="text-white me-4">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="" class="text-white me-4">
+            <i class="fab fa-github"></i>
+          </a>
+        </section> -->
+        <!-- Section: Social -->
+      </div>
+      <!-- Grid container -->
+
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+        © 2022 Copyright:
+        <a class="text-white" href="/index/">Online Automatic WebPage Builder</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+  </div>
+  <!-- End of .container -->
+
+
+  <script src="/static/web/js/script.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="/static/web/js/checkSession.js"></script>
+    
+</body>
+
+</html>

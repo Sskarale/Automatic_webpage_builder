@@ -1,0 +1,538 @@
+{% csrf_token %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Web Page Builder</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/static/web/css/style.css">
+</head>
+
+<body>
+        <input type="hidden" id="txtID" value="{{request.GET.q}}">
+    <input type="hidden" id="uniqueId" name="" value="1">
+    <div class="container-fluid pb-2" style="background: #572524;color: white;">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg" style="background: #572524;">
+                <div class="container-fluid">
+                    <a class="navbar-brand text-white text-uppercase fw-bold" href="/index/">Web Page Builder</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active text-white text-uppercase" aria-current="page"
+                                    href="/index/">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white text-uppercase ms-3" href="/Template/">Templates</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="/about/" class="nav-link text-white text-uppercase ms-3">About</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link text-white text-uppercase" href="/profile/" id="webProfile">Profile</a>
+                              </li>
+
+                           <li class="nav-item">
+                            <a class="nav-link text-white text-uppercase" href="/login/" id="webLogin">Log in</a>
+                          </li>
+
+                          <li class="nav-item">
+                            <a class="nav-link text-white text-uppercase" href="/logout/" id="webLogout">Log out</a>
+                          </li>
+
+                            <li class="nav-item">
+                                <!-- <a href="/Template/" class="nav-link text-dark text-uppercase  btn btn-light ms-3">get started</a> -->
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+     <!-- form -->
+     <div class="container invitation-form">
+        <div class="row">
+            <div class="col-md-6 col-sm-12 pt-3 d-flex align-items-center">
+                <img src="/static/web/images/firstbw.png" alt="" class="img-fluid" style="position: relative;top: -210px;">
+            </div>
+
+            <div class="col-md-6 col-sm-12">
+                <div class="pt-5 text-center">
+                    <h4>Fill the form to start designing</h4>
+                </div>
+
+                <div class="d-flex pt-4">
+                    <div class="container">
+                        <form class="row g-3" action="#" method="">
+                            <input type="hidden" id="businessWebsite" value="1">
+
+                            <div class="col-md-6 col-sm-12">
+                                <label for="bride" class="form-label">About</label>
+                                <input type="text" class="form-control" id="txtAbout">
+                            </div>
+                           
+                            <div class="col-md-6 col-sm-12">
+                                <label for="bride" class="form-label">Services1 Heading</label>
+                                <input type="text " class="form-control" id="txtServicesHeading1">
+                            </div>
+
+                             <div class="col-md-6 col-sm-12">
+                                <label for="bride" class="form-label">Services1 Description</label>
+                                <input type="text " class="form-control" id="txtServicesDescription1">
+                            </div>
+
+                             <div class="col-md-6 col-sm-12">
+                                <label for="bride" class="form-label">Services2 Heading</label>
+                                <input type="text " class="form-control" id="txtServicesHeading2">
+                            </div>
+
+                             <div class="col-md-6 col-sm-12">
+                                <label for="bride" class="form-label">Services2 Description</label>
+                                <input type="text " class="form-control" id="txtServicesDescription2">
+                            </div>
+
+                             <div class="col-md-6 col-sm-12">
+                                <label for="bride" class="form-label">Services3 Heading</label>
+                                <input type="text " class="form-control" id="txtServicesHeading3">
+                            </div>
+
+                             <div class="col-md-6 col-sm-12">
+                                <label for="bride" class="form-label">Services3 Description</label>
+                                <input type="text " class="form-control" id="txtServicesDescription3">
+                            </div>
+
+                            <div class="col-md-6 col-sm-12">
+                                <label for="bride" class="form-label">Happy Clients</label>
+                                <input type="text " class="form-control" id="txtHappyClients">
+                            </div>
+
+                               <div class="col-md-6 col-sm-12">
+                                <label for="bride" class="form-label">Projects</label>
+                                <input type="text " class="form-control" id="txtProjects">
+                            </div>
+
+                               <div class="col-md-6 col-sm-12">
+                                <label for="bride" class="form-label">Hours of Support</label>
+                                <input type="text " class="form-control" id="txtHoursSupport">
+                            </div>
+
+
+
+                               <div class="col-md-6 col-sm-12">
+                                <label for="bride" class="form-label">Hard Woorkers</label>
+                                <input type="text " class="form-control" id="txtHardWorkers">
+                            </div>
+
+                               <div class="col-md-6 col-sm-12">
+                                <label for="bride" class="form-label">Company description</label>
+                                <input type="text " class="form-control" id="txtCompanyDescription">
+                            </div>
+
+
+
+                               <div class="col-md-6 col-sm-12">
+                                <label for="bride" class="form-label">Pricing1</label>
+                                <input type="text " class="form-control" id="txtPricing1">
+                            </div>
+
+
+                            <div class="col-md-6 col-sm-12">
+                                <label for="bride" class="form-label">Pricing1 Description</label>
+                                <input type="text " class="form-control" id="txtPricing1Description">
+                            </div>
+
+                               <div class="col-md-6 col-sm-12">
+                                <label for="bride" class="form-label">Pricing2</label>
+                                <input type="text " class="form-control" id="txtPricing2">
+                            </div>
+
+                               <div class="col-md-6 col-sm-12">
+                                <label for="bride" class="form-label">Pricing1 Description</label>
+                                <input type="text " class="form-control" id="txtPricing2Description">
+                            </div>
+
+
+                            <div class="col-md-6 col-sm-12">
+                                <label for="bride" class="form-label">Facilities1</label>
+                                <input type="text " class="form-control" id="txtFacility1">
+                            </div>
+
+
+                            <div class="col-md-6 col-sm-12">
+                                <label for="bride" class="form-label">Facilities2</label>
+                                <input type="text " class="form-control" id="txtFacility2">
+                            </div>
+
+
+                            <div class="col-md-6 col-sm-12">
+                                <label for="bride" class="form-label">Facilities3</label>
+                                <input type="text " class="form-control" id="txtFacility3">
+                            </div>
+
+                             <div class="col-md-6 col-sm-12">
+                                <label for="bride" class="form-label">Facilities4</label>
+                                <input type="text " class="form-control" id="txtFacility4">
+                            </div>
+
+                            <!-- <div class="col-md-6 col-sm-12">
+                                <label for="bride" class="form-label">Testimonial1</label>
+                                <input type="text " class="form-control" id="txtTestimonial1">
+                            </div>
+
+                            <div class="col-md-6 col-sm-12">
+                                <label for="bride" class="form-label">Testimonial1 Description</label>
+                                <input type="text " class="form-control" id="txtTestimonial1Description">
+                            </div>
+
+                             <div class="col-md-6 col-sm-12">
+                                <label for="bride" class="form-label">Testimonial2</label>
+                                <input type="text " class="form-control" id="txtTestimonial2">
+                            </div>
+
+                            <div class="col-md-6 col-sm-12">
+                                <label for="bride" class="form-label">Testimonial3 Description</label>
+                                <input type="text " class="form-control" id="txtTestimonial2Description">
+                            </div>
+
+                             <div class="col-md-6 col-sm-12">
+                                <label for="bride" class="form-label">Testimonial3</label>
+                                <input type="text " class="form-control" id="txtTestimonial3">
+                            </div>
+
+                            <div class="col-md-6 col-sm-12">
+                                <label for="bride" class="form-label">Testimonial3 Description</label>
+                                <input type="text " class="form-control" id="txtTestimonial3Description">
+                            </div>
+
+                             <div class="col-md-6 col-sm-12">
+                                <label for="bride" class="form-label">Testimonial4</label>
+                                <input type="text " class="form-control" id="txtTestimonial4">
+                            </div>
+
+                            <div class="col-md-6 col-sm-12">
+                                <label for="bride" class="form-label">Testimonial4 Description</label>
+                                <input type="text " class="form-control" id="txtTestimonial4Description">
+                            </div>
+
+                             <div class="col-md-6 col-sm-12">
+                                <label for="bride" class="form-label">Testimonial5</label>
+                                <input type="text " class="form-control" id="txtTestimonial5">
+                            </div>
+
+                            <div class="col-md-6 col-sm-12">
+                                <label for="bride" class="form-label">Testimonial5 Description</label>
+                                <input type="text " class="form-control" id="txtTestimonial5Description">
+                            </div> -->
+
+                              <div class="col-md-6 col-sm-12">
+                                <label for="bride" class="form-label">Location</label>
+                                <input type="text " class="form-control" id="txtLocation">
+                            </div>
+
+                              <div class="col-md-6 col-sm-12">
+                                <label for="bride" class="form-label">Email</label>
+                                <input type="text " class="form-control" id="txtEmail">
+                            </div>
+
+                              <div class="col-md-6 col-sm-12">
+                                <label for="bride" class="form-label">Phone no</label>
+                                <input type="text " class="form-control" id="txtPhoneNo">
+                            </div>
+
+
+                           
+
+                            <div class="d-grid gap-2">
+                                <button class="btn btn-outline-secondary mt-2 mb-4" 
+                                 id="btn_add">Submit</button>
+                                <button class="btn btn-outline-secondary mt-2 mb-4" type="button" id="btn_update">Update</button>
+
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <section class="footer mt-5">
+        <div class="container">
+          <footer class="py-5">
+            <div class="row">
+              <div class="col-4 ps-5">
+                <h5 class="text-white">Get in touch</h5>
+                <ul class="nav flex-column mt-4">
+                  <li class="text-white pt-2">
+                    <i class="icon fa-solid fa-location-dot text-white"></i>
+                    <span class="ps-2">Belagavi</span>
+                  </li>
+                  <li class="text-white pt-2">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span class="ps-2">info@gmail.com</span>
+                  </li>
+                  <li class="text-white pt-2">
+                    <i class="icon fa-solid fa-phone text-white"></i>
+                    <span class="ps-2">+91 9876543210</span>
+                  </li>
+    
+                </ul>
+              </div>
+              <div class="col-4 ps-5">
+                <h5 class="text-white">Get to know us</h5>
+                <ul class="nav flex-column mt-4">
+                  <li class="nav-item mb-2"><a href="/index/" class="nav-link p-0 text-white">Home</a></li>
+                  <li class="nav-item mb-2"><a href="/Template/" class="nav-link p-0 text-white">Templates</a>
+                  </li>
+                  <li class="nav-item mb-2"><a href="/about/" class="nav-link p-0 text-white">About Us</a></li>
+                  <!-- <li class="nav-item mb-2"><a href="/contact/" class="nav-link p-0 text-white">Contact</a></li> -->
+                  <!-- <li class="nav-item mb-2"><a href="/about/" class="nav-link p-0 text-white">About</a></li> -->
+                </ul>
+              </div>
+    
+              <div class="col-4 ps-5">
+                <h5 class="text-white">Templates</h5>
+                <ul class="nav flex-column mt-4">
+                  <li class="nav-item mb-2"><a href="/websites/" class="nav-link p-0 text-white">Website Templates</a></li>
+                  <li class="nav-item mb-2"><a href="/Visit-cards/" class="nav-link p-0 text-white">Visting Cards</a>
+                  </li>
+                  <li class="nav-item mb-2"><a href="/invitation/" class="nav-link p-0 text-white">Invitation Cards</a>
+                  </li>
+    
+                </ul>
+              </div>
+    
+           
+            </div>
+    
+            <div class="d-flex justify-content-between py-4 my-4 border-top">
+              <p>© 2021 Company, Inc. All rights reserved.</p>
+              <ul class="list-unstyled d-flex">
+                <li class="ms-3"><a href="#" class="text-white"><i class="fa-brands fa-twitter fa-2x"></i></a>
+    
+                <li class="ms-3"><a href="#" class="text-white"><i class="fa-brands fa-instagram fa-2x"></i></a>
+    
+                <li class="ms-3"><a href="#" class="text-white"><i class="fa-brands fa-facebook fa-2x"></i></a>
+    
+              </ul>
+            </div>
+    
+            <!-- Back to top button -->
+            <button type="button" class="btn btn-danger btn-floating btn-lg" id="btn-back-to-top">
+              <i class="fas fa-arrow-up"></i>
+            </button>
+          </footer>
+    
+        </div>
+      </section>
+      <!-- FOOTER END -->
+    
+    
+      <script src="/static/web/js/script.js"></script>
+    <!-- end -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    
+    <script src="/static/web/js/jsFirstBusiness.js"></script>
+    <script type="text/javascript" src="/static/web/js/checkSession.js"></script>
+    
+</body>
+
+</html>
+
+<script type="text/javascript">
+          function getWebsiteData() {
+    // alert("Hi");
+    var formData = new FormData();
+    formData.append("csrfmiddlewaretoken", $('input[name=csrfmiddlewaretoken]').val());
+    formData.append("id",  $('#txtID').val());
+    formData.append("action", "getData");
+
+    formData.append("uniqueId", '1');
+
+
+
+    $.ajax({
+
+      url: "/get_business_website_data/",
+      type: "POST",
+      data: formData,
+      processData: false,
+      contentType: false,
+      success: function (response) {
+
+        console.log(response);
+        // $("#dataTables-example tr:gt(0)").remove();
+        for (var i = 0; i < response.length; i++) {
+          var j = i + 1;
+
+            $("#txtAbout").val(response[i].bw_about);
+            $("#txtServicesHeading1").val(response[i].bw_services_heading1);
+            $("#txtServicesDescription1").val(response[i].bw_services_description1);
+            $("#txtServicesHeading2").val(response[i].bw_services_heading2);
+            $("#txtServicesDescription2").val(response[i].bw_services_description2);
+            $("#txtServicesHeading3").val(response[i].bw_services_heading3);
+            $("#txtServicesDescription3").val(response[i].bw_services_description3);
+            $("#txtProjects").val(response[i].bw_projects);
+            $("#txtHoursSupport").val(response[i].bw_hours);
+            $("#txtHardWorkers").val(response[i].bw_hard_workers);
+            $("#txtHappyClients ").val(response[i].bw_happy_clients);
+
+            $("#txtCompanyDescription").val(response[i].bw_company_description);
+            $("#txtPricing1").val(response[i].bw_pricing1);
+            $("#txtPricing2").val(response[i].bw_pricing2);
+            $("#txtPricing1Description").val(response[i].bw_pricing1_description);
+            $("#txtPricing2Description").val(response[i].bw_pricing2_description);
+            $("#txtFacility1").val(response[i].bw_facility1);
+            $("#txtFacility2").val(response[i].bw_facility2);
+            $("#txtFacility3").val(response[i].bw_facility3);
+            $("#txtFacility4").val(response[i].bw_facility4);
+            $("#txtTestimonial1").val(response[i].bw_testimonial1);
+            $("#txtTestimonial1Description").val(response[i].bw_testimonial1_description);
+            $("#txtTestimonial2").val(response[i].bw_testimonial2);
+            $("#txtTestimonial2Description").val(response[i].bw_testimonial2_description);
+            $("#txtTestimonial3").val(response[i].bw_testimonial3);
+            $("#txtTestimonial3Description").val(response[i].bw_testimonial3_description);
+            $("#txtTestimonial4").val(response[i].bw_testimonial4);
+            $("#txtTestimonial4Description").val(response[i].bw_testimonial4_description);
+            $("#txtTestimonial5Description").val(response[i].bw_testimonial5_description);
+            $("#txtLocation").val(response[i].bw_location);
+            $("#txtEmail").val(response[i].bw_email);
+            $("#txtPhoneNo").val(response[i].bw_phone);
+
+
+
+
+        }
+      },
+      error: function (request, error) {
+        console.error(error);
+      },
+      complete: function () {
+
+      },
+    });
+
+  }
+  getWebsiteData();
+
+  if($("#txtID").val() == "") {
+    $("#btn_add").show();
+    $("#btn_update").hide();
+  } else {
+    $("#btn_add").hide();
+    $("#btn_update").show();
+  }
+
+  $("#btn_update").click(function (e) {
+    //verification
+
+    // alert("Hello")
+     
+  var formData = new FormData();
+  
+
+
+  formData.append("txtAbout", $("#txtAbout").val());
+
+  formData.append("businessWebsite", $("#businessWebsite").val());
+
+  formData.append("txtServicesHeading1", $("#txtServicesHeading1").val());
+  formData.append("txtServicesDescription1", $("#txtServicesDescription1").val());
+  formData.append("txtServicesHeading2", $("#txtServicesHeading2").val());
+  formData.append("txtServicesDescription2", $("#txtServicesDescription2").val());
+  formData.append("txtServicesHeading3", $("#txtServicesHeading3").val());
+  formData.append("txtServicesDescription3", $("#txtServicesDescription3").val());
+
+  formData.append("txtHappyClients", $("#txtHappyClients").val());
+  formData.append("txtProjects", $("#txtProjects").val());
+  formData.append("txtHoursSupport", $("#txtHoursSupport").val());
+  formData.append("txtHardWorkers", $("#txtHardWorkers").val());
+  formData.append("txtCompanyDescription", $("#txtCompanyDescription").val());
+
+
+  formData.append("txtPricing1", $("#txtPricing1").val());
+  formData.append("txtPricing1Description", $("#txtPricing1Description").val());
+  formData.append("txtPricing2", $("#txtPricing2").val());
+  formData.append("txtPricing2Description", $("#txtPricing2Description").val());
+
+  formData.append("txtFacility1", $("#txtFacility1").val());
+  formData.append("txtFacility2", $("#txtFacility2").val());
+  formData.append("txtFacility3", $("#txtFacility3").val());
+  formData.append("txtFacility4", $("#txtFacility4").val());
+
+  formData.append("txtTestimonial1", $("#txtTestimonial1").val());
+  formData.append("txtTestimonial1Description", $("#txtTestimonial1Description").val());
+  formData.append("txtTestimonial2", $("#txtTestimonial2").val());
+  formData.append("txtTestimonial2Description", $("#txtTestimonial2Description").val());
+  formData.append("txtTestimonial3", $("#txtTestimonial3").val());
+  formData.append("txtTestimonial3Description", $("#txtTestimonial3Description").val());
+  formData.append("txtTestimonial4", $("#txtTestimonial4").val());
+  formData.append("txtTestimonial4Description", $("#txtTestimonial4Description").val());
+  formData.append("txtTestimonial5", $("#txtTestimonial5").val());
+  formData.append("txtTestimonial5Description", $("#txtTestimonial5Description").val());
+
+  formData.append("txtLocation", $("#txtLocation").val());
+  formData.append("txtEmail", $("#txtEmail").val());
+  formData.append("txtPhoneNo", $("#txtPhoneNo").val());
+
+  formData.append("id", $("#txtID").val());
+
+
+
+  formData.append("csrfmiddlewaretoken", $('input[name=csrfmiddlewaretoken]').val());
+  formData.append("action", "add");
+
+  // var table = $("#dataTables-example").DataTable();
+
+  $.ajax({
+    beforeSend: function () {
+      $(".btn .spinner-border").show();
+      $("#btn_add").attr("disabled", true);
+    },
+    url: "/business_website_update/",
+    type: "POST",
+    // headers: {'X-CSRFToken': '{{ csrf_token }}'},
+    data: formData,
+    processData: false,
+    contentType: false,
+    success: function (result) {
+
+        alert(" Updated Successfully");
+        window.open("/first_business_details1/?id="+result[0].bw_id,'_blank')
+
+    },
+    error: function (request, error) {
+      console.error(error);
+    },
+    complete: function () {
+      $(".btn .spinner-border").hide();
+      $("#btn_add").attr("disabled", false);
+    },
+  });
+});
+</script>

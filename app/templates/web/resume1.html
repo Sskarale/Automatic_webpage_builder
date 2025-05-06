@@ -1,0 +1,275 @@
+{% csrf_token %}
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Page Builder</title>
+  <link rel="stylesheet" href="Template.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+
+<body>
+
+  <div class="container-fluid pb-5" style="background: #572524;color: white;">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg" style="background: #572524;">
+        <div class="container-fluid">
+          <a class="navbar-brand text-white text-uppercase fw-bold" href="/resume/">Page Builder</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-white text-uppercase" aria-current="page" href="/index/">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white text-uppercase ms-3" href="/Template/">Templates</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link text-white text-uppercase ms-3">About</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
+              <li class="nav-item">
+                <a class="nav-link text-white text-uppercase" href="/login/">Log in</a>
+              </li>
+
+               <li class="nav-item">
+                <a class="nav-link text-white text-uppercase" href="/logout/">Log out</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link text-dark text-uppercase  btn btn-light ms-3">get started</a>
+              </li>
+            </ul>
+
+          </div>
+
+
+        </div>
+      </nav>
+    </div>
+    <!--  -->
+
+    <div class="container  ">
+      <div class="row">
+        <div class="col-md-6 ">
+          <h1 class="text-white fw-bold mt-4"style="font-size:40px">Choose Category</h1>
+          <p class="text-white fs-4 fw-bold" >To Get Started ...</p>
+        
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!--  -->
+<!-- <div class="container"> -->
+<!-- <div class="row"> -->
+  <!-- <div class="col-md-3 col-sm-6 card mx-2 my-3" style="width: 19rem;">
+    <a href="websites.html"><img src="images/webs.jpg" class="card-img-top my-2" alt="..." style="height: 310px;"></a>
+    <div class="card-body">
+      <p class=" card-text  fw-bold fs-4">Websites Templates</p>
+    </div>  
+  </div> -->
+
+ <!--  <div class="col-md-3 col-sm-6 card mx-2 my-3" style="width: 25rem;">
+    <a href="Visit-cards.html"><img src="images/visiting-card.jpg" class="card-img-top my-2" alt="..."style="height: 310px;"></a>
+    <div class="card-body">
+      <p class="card-text fs-4 fw-bold ">Visiting Cards</p>
+    </div>
+  </div>
+
+  <div class="col-md-3 col-sm-6 card mx-2 my-3" style="width: 25rem;">
+   <a href="invitation.html"><img src="images/invitation.webp" class="card-img-top my-2" alt="..."style="height: 310px;"></a> 
+    <div class="card-body">
+      <p class="card-text fs-4 fw-bold">Invitation Cards</p>
+    </div>
+  </div>
+   <div class="col-md-3 col-sm-6 card mx-2 my-3" style="width: 25rem;">
+   <a href="resume.html"><img src="images/resume.jpg" class="card-img-top my-2" alt="..."style="height: 310px;"></a> 
+    <div class="card-body">
+      <p class="card-text fs-4 fw-bold">Resumes</p>
+    </div>
+  </div>
+
+</div>
+</div> -->
+
+<!-- FORM START  -->
+    <div class="container">
+        <div class="row my-5">
+            <!-- <div class="col-sm-6 col-md-6 col-6 d-flex align-items-center">            
+                    <img src="images/resume1.jpg" alt="" width="600px">
+           </div>
+             -->
+            <div class="col-sm-6 col-12">
+                <form>
+                    <h4 class="text-center mb-4 vform ">Fill the Form to Start Designing</h4>
+                    <h4>About Me:</h4>
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12">
+                            <div class="mb-3">
+                                <textarea class="form-control" rows="5"  name="text" id="InputAboutMe" placeholder="About Me"></textarea>
+                            </div>
+                            <div class="mb-3">
+                                <label for="uploadFile" class="form-label ">Upload Image</label>
+                                <input type="file" class="form-control" id="InputUploadFile" aria-describedby="">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h4>Eductions:</h4>
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6">
+                            <div class="mb-3">
+                                <input type="Name" class="form-control" id="InputEduction1" placeholder="eduction1" aria-describedby="">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <div class="mb-3">
+                                <input type="Name" class="form-control" id="InputEduction2" placeholder="eduction2" aria-describedby="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6">
+                            <div class="mb-3">
+                                <input type="Name" class="form-control" id="InputEduction3" placeholder="eduction3" aria-describedby="">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <div class="mb-3">
+                                <input type="Name" class="form-control" id="InputEduction4" placeholder="eduction4" aria-describedby="">
+                            </div>
+                        </div>
+                    </div>
+
+                     <h4>Skills:</h4>
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6">
+                            <div class="mb-3">
+                                <input type="Name" class="form-control" id="InputSkill1" placeholder="skill-1" aria-describedby="">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <div class="mb-3">
+                                <input type="Name" class="form-control" id="InputSkill2" placeholder="skill-2" aria-describedby="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6">
+                            <div class="mb-3">
+                               <input type="Name" class="form-control" id="InputSkill3" placeholder="skill-3" aria-describedby="">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <div class="mb-3">
+                                <input type="Name" class="form-control" id="InputSkill4" placeholder="skill-4" aria-describedby="">
+                            </div>
+                        </div>
+                    </div>
+                    <h4>Experiences:</h4>
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6">
+                            <div class="mb-3">
+                                <input type="Name" class="form-control" id="InputExperience1" placeholder="1" aria-describedby="">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <div class="mb-3">
+                                <input type="Name" class="form-control" id="InputExperience2" placeholder="2" aria-describedby="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6">
+                            <div class="mb-3">
+                               <input type="Name" class="form-control" id="InputExperience3" placeholder="3" aria-describedby="">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <div class="mb-3">
+                                <input type="Name" class="form-control" id="InputExperience4" placeholder="4" aria-describedby="">
+                            </div>
+                        </div>
+                    </div>
+                    <h4>Contact:</h4>
+                      <div class="row">
+                        <div class="col-md-12 col-sm-12">
+                            <div class="mb-3">
+                                
+                                <input type="text" class="form-control" id="InputName" placeholder="Enter your Name" aria-describedby="">
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-sm-12">
+                            <div class="mb-3">
+                              
+                                <input type="text" class="form-control" id="InputJobTitle" placeholder="Enter your Job-Title" aria-describedby="">
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-sm-12">
+                            <div class="mb-3">
+                              
+                                <input type="email" class="form-control" id="InputEmail" placeholder="Enter your Email" 
+                                    aria-describedby="emailHelp">
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-sm-12">
+                            <div class="mb-3">
+                               
+                                <input type="number" class="form-control" id="InputAlterNumber" placeholder="Enter your Phone number" aria-describedby="" maxlength="10">
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-sm-12">
+                            <div class="mb-3">
+                              
+                                <input type="text" class="form-control" id="InputAddress" placeholder="Enter your Address" aria-describedby="">
+                            </div>
+                        </div>
+                    </div>
+                   
+                    <div class=" vbutton d-grid gp-3">
+                        <button type="submit" class="btn btn-outline-primary" id="btn_submit">Submit</button>
+
+                    </div>
+                </form>
+
+            </div>
+            <div class="col-sm-6 col-12 p-5">
+                 <img src="/static/web/images/resume1.jpg" style="width: 650px; height: 900px;">
+            </div>
+          </div>
+        </div>
+
+        
+ 
+  
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+   <script src="/static/web/js/jsResume1.js"></script>
+
+
+
+</body>
+
+</html>

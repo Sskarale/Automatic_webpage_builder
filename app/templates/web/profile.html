@@ -1,0 +1,778 @@
+{% csrf_token %}
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Page Builder</title>
+    <link rel="stylesheet" href="/static/web/css/Template.css">
+    <link rel="stylesheet" href="/static/web/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+
+
+    <div class="container-fluid " style="background: #572524;color: white;">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg" style="background: #572524;">
+                <div class="container-fluid">
+                    <a class="navbar-brand text-white text-uppercase fw-bold" href="/index/">Page Builder</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active text-white text-uppercase" aria-current="page"
+                                    href="/index/">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white text-uppercase ms-3" href="/Template/">Templates</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link text-white text-uppercase ms-3" href="/about/">About</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
+                             <li class="nav-item">
+                                <a class="nav-link text-white text-uppercase" href="/profile/" id="webProfile">Profile</a>
+                              </li>
+
+
+                             <li class="nav-item">
+                            <a class="nav-link text-white text-uppercase" href="/login/" id="webLogin">Log in</a>
+                          </li>
+
+                          <li class="nav-item">
+                            <a class="nav-link text-white text-uppercase" href="/logout/" id="webLogout">Log out</a>
+                          </li>
+
+                            <li class="nav-item">
+                                <!-- <a class="nav-link text-dark text-uppercase  btn btn-light ms-3">get started</a> -->
+                            </li>
+                        </ul>
+
+                    </div>
+
+
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!--About   -->
+<div class="container mt-5">
+    <h1>You have designed..</h1>
+</div>
+
+<div class="container mt-5">
+    <div>
+        <h2>Personal Website</h2>
+        <table class="table table-bordered border-primary" id="tableData1">
+              <thead>
+                <tr>
+                  <th scope="col">SI NO</th>
+                  <th scope="col">Last Modified</th>
+                  <th scope="col">Website Type</th>
+                  <th scope="col">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                    
+              </tbody>
+            </table>
+        </div>
+   
+
+    <div>
+        <h2>Portfolio</h2>
+        <table class="table table-bordered border-primary" id="tableData2">
+              <thead>
+                <tr>
+                   <th scope="col">SI NO</th>
+                  <th scope="col">Last Modified</th>
+                  <th scope="col">Website Type</th>
+                  <th scope="col">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                    
+              </tbody>
+            </table>
+        </div>
+
+          <div>
+        <h2>Business Website</h2>
+        <table class="table table-bordered border-primary" id="tableData3">
+              <thead>
+                <tr>
+                   <th scope="col">SI NO</th>
+                  <th scope="col">Last Modified</th>
+                  <th scope="col">Website Type</th>
+                  <th scope="col">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                    
+              </tbody>
+            </table>
+        </div>
+
+          <div>
+        <h2>Commercial Website</h2>
+        <table class="table table-bordered border-primary" id="tableData4">
+              <thead>
+                <tr>
+                  <th scope="col">SI NO</th>
+                  <th scope="col">Last Modified</th>
+                  <th scope="col">Website Type</th>
+                  <th scope="col">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                    
+              </tbody>
+            </table>
+        </div>
+
+ </div>
+
+
+   <!-- Remove the container if you want to extend the Footer to full width. -->
+  <div class="container-fluid">
+    <!-- Footer -->
+    <footer class="text-center text-white" style="background-color: #572524">
+      <!-- Grid container -->
+      <div class="container-fluid">
+        <!-- Section: Links -->
+        <section class="mt-5">
+          <!-- Grid row-->
+          <div class="row text-center d-flex justify-content-center pt-5">
+            <!-- Grid column -->
+            <div class="col-md-2">
+              <h6 class="text-uppercase font-weight-bold">
+                <a href="#!" class="text-white">About us</a>
+              </h6>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-2">
+              <h6 class="text-uppercase font-weight-bold">
+                <a href="#!" class="text-white">Templates</a>
+              </h6>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-2">
+              <h6 class="text-uppercase font-weight-bold">
+                <a href="#!" class="text-white">Home</a>
+              </h6>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-2">
+              <h6 class="text-uppercase font-weight-bold">
+                <a href="#!" class="text-white">Resumes</a>
+              </h6>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-2">
+              <h6 class="text-uppercase font-weight-bold">
+                <a href="#!" class="text-white">Login</a>
+              </h6>
+            </div>
+            <!-- Grid column -->
+          </div>
+          <!-- Grid row-->
+        </section>
+        <!-- Section: Links -->
+
+        <hr class="my-5" />
+
+        <!-- Section: Text -->
+        <section class="">
+          <div class="row d-flex justify-content-center">
+            <div class="col-lg-8">
+              <p>
+              Easily print or send online
+              Create personalized cards for the people you care about.
+              Invitation Maker
+              Design beautiful invitations to download, print or send online (with RSVP) for free
+              </p>
+            </div>
+          </div>
+        </section>
+        <!-- Section: Text -->
+
+        <!-- Section: Social -->
+        <section class="text-center mb-5">
+          <a href="" class="text-white me-4">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="" class="text-white me-4">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="" class="text-white me-4">
+            <i class="fab fa-google"></i>
+          </a>
+          <a href="" class="text-white me-4">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="" class="text-white me-4">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="" class="text-white me-4">
+            <i class="fab fa-github"></i>
+          </a>
+        </section>
+        <!-- Section: Social -->
+      </div>
+      <!-- Grid container -->
+
+      <!-- Copyright -->
+      <div
+           class="text-center p-3"
+           style="background-color: rgba(0, 0, 0, 0.2)"
+           >
+        © 2022 Copyright:
+        <a class="text-white" href="/index/"
+           >Digital Card Generator</a
+          >
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+  </div>
+  <!-- End of .container -->
+
+  <!-- Modal Header -->
+    <div class="modal fade" id="delete_modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="delete_modal">Delete</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <p class="text-center">
+                            Are you sure you want to delete?
+                        </p>
+                        <input type="hidden" id="delete_id">
+                        <div class="row ">
+                            <div class="col-6 mx-auto">
+                                <button type="button" class="btn btn-success" id="btn_delete">Yes</button>
+
+
+                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
+                                    No
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+     <div class="modal fade" id="delete_modal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="delete_modal">Delete</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <p class="text-center">
+                            Are you sure you want to delete?
+                        </p>
+                        <input type="hidden" id="delete_id">
+                        <div class="row ">
+                            <div class="col-6 mx-auto">
+                                <button type="button" class="btn btn-success" id="btn_delete1">Yes</button>
+
+
+                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
+                                    No
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+     <div class="modal fade" id="delete_modal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="delete_modal">Delete</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <p class="text-center">
+                            Are you sure you want to delete?
+                        </p>
+                        <input type="hidden" id="delete_id">
+                        <div class="row ">
+                            <div class="col-6 mx-auto">
+                                <button type="button" class="btn btn-success" id="btn_delete2">Yes</button>
+
+
+                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
+                                    No
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+         <div class="modal fade" id="delete_modal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="delete_modal">Delete</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <p class="text-center">
+                            Are you sure you want to delete?
+                        </p>
+                        <input type="hidden" id="delete_id">
+                        <div class="row ">
+                            <div class="col-6 mx-auto">
+                                <button type="button" class="btn btn-success" id="btn_delete3">Yes</button>
+
+
+                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
+                                    No
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/static/web/js/script.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+
+    <script type="text/javascript" src="/static/web/js/checkSession.js"></script>
+
+</body>
+
+</html>
+
+<script type="text/javascript">
+    
+function getPersonalWebsite1Data() {
+  // alert("Hi");
+  var formData = new FormData();
+  formData.append("csrfmiddlewaretoken", $('input[name=csrfmiddlewaretoken]').val());
+  formData.append("action", "getData");
+  formData.append("uniqueId", '1');
+
+
+
+  $.ajax({
+
+    url: "/get_personal_website_profile/",
+    type: "POST",
+    data: formData,
+    processData: false,
+    contentType: false,
+    success: function (response) {
+
+      // console.log(response);
+      // $("#dataTables-example tr:gt(0)").remove();
+      for (var i = 0; i < response.length; i++) {
+        var j = i + 1;
+
+        let modified_date =  response[i].pw_created_at.substring(0,10);
+
+        
+        $("#tableData1").append('<tr><td>' + j + '</td><td style="display: none;">' + response[i].pw_id + '</td><td>' + modified_date + '</td><td>Personal Website</td><td><div class="d-flex" style="justify-content: space-evenly;"><a href="/first_personal_details1?id='+response[i].pw_id+'" target="blank" class="text-primary" >View</a><a href="/first_personal_website?q='+response[i].pw_id+'"   class="text-primary" >Edit</a><a href="javascript:void(0);" title="Delete" data-bs-toggle="modal" data-bs-target="#delete_modal" class="text-danger" id="delete_row" onClick="getRowsDelete();">Delete</a></div></td></tr>');
+      }
+    },
+    error: function (request, error) {
+      console.error(error);
+    },
+    complete: function () {
+
+    },
+  });
+
+}
+
+getPersonalWebsite1Data();
+function getPersonalWebsite2Data() {
+  // alert("Hi");
+  var formData = new FormData();
+  formData.append("csrfmiddlewaretoken", $('input[name=csrfmiddlewaretoken]').val());
+  formData.append("action", "getData");
+  formData.append("uniqueId", '2');
+
+
+
+  $.ajax({
+
+    url: "/get_personal_website_profile1/",
+    type: "POST",
+    data: formData,
+    processData: false,
+    contentType: false,
+    success: function (response) {
+
+      // console.log(response);
+      // $("#dataTables-example tr:gt(0)").remove();
+      for (var i = 0; i < response.length; i++) {
+        var j = i + 1;
+        let modified_date =  response[i].pw_created_at.substring(0,10);
+
+        
+        $("#tableData2").append('<tr><td>' + j + '</td><td style="display: none;">' + response[i].pw_id + '</td><td>' + modified_date + '</td><td>Portfolio</td><td><div class="d-flex" style="justify-content: space-evenly;"><a href="/second_personal_details1?id='+response[i].pw_id+'" target="blank" class="text-primary" >View</a><a href="/second_personal_website?q='+response[i].pw_id+'"   class="text-primary" >Edit</a><a href="javascript:void(0);" title="Delete" data-bs-toggle="modal" data-bs-target="#delete_modal1" class="text-danger" id="delete_row" onClick="getRowsDelete1();">Delete</a></div></td></tr>');
+      }
+    },
+    error: function (request, error) {
+      console.error(error);
+    },
+    complete: function () {
+
+    },
+  });
+
+}
+
+getPersonalWebsite2Data();
+
+function getBusinessWebsite1Data() {
+  // alert("Hi");
+  var formData = new FormData();
+  formData.append("csrfmiddlewaretoken", $('input[name=csrfmiddlewaretoken]').val());
+  formData.append("action", "getData");
+  formData.append("uniqueId", '1');
+
+
+
+  $.ajax({
+
+    url: "/get_business_website_profile1/",
+    type: "POST",
+    data: formData,
+    processData: false,
+    contentType: false,
+    success: function (response) {
+
+      // console.log(response);
+      // $("#dataTables-example tr:gt(0)").remove();
+      for (var i = 0; i < response.length; i++) {
+        var j = i + 1;
+
+        let modified_date =  response[i].bw_created_at.substring(0,10);
+
+        
+        $("#tableData3").append('<tr><td>' + j + '</td><td style="display: none;">' + response[i].bw_id + '</td><td>' + modified_date + '</td><td>Business Website</td><td><div class="d-flex" style="justify-content: space-evenly;"><a href="/first_business_details1?id='+response[i].bw_id+'" target="blank" class="text-primary" >View</a><a href="/first_business_website?q='+response[i].bw_id+'"   class="text-primary">Edit</a><a href="javascript:void(0);" title="Delete" data-bs-toggle="modal" data-bs-target="#delete_modal2" class="text-danger" id="delete_row" onClick="getRowsDelete2();">Delete</a></div></td></tr>');
+      }
+    },
+    error: function (request, error) {
+      console.error(error);
+    },
+    complete: function () {
+
+    },
+  });
+
+}
+
+getBusinessWebsite1Data();
+
+function getBusinessWebsite2Data() {
+  // alert("Hi");
+  var formData = new FormData();
+  formData.append("csrfmiddlewaretoken", $('input[name=csrfmiddlewaretoken]').val());
+  formData.append("action", "getData");
+  formData.append("uniqueId", '2');
+
+
+
+  $.ajax({
+
+    url: "/get_business_website_profile2/",
+    type: "POST",
+    data: formData,
+    processData: false,
+    contentType: false,
+    success: function (response) {
+
+      console.log(response);
+      // $("#dataTables-example tr:gt(0)").remove();
+      for (var i = 0; i < response.length; i++) {
+        var j = i + 1;
+        let modified_date =  response[i].bw_created_at.substring(0,10);
+
+        
+        $("#tableData4").append('<tr><td>' + j + '</td><td style="display: none;">' + response[i].bw_id + '</td><td>' + modified_date + '</td><td>Commercial Website</td><td><div class="d-flex" style="justify-content: space-evenly;"><a href="/second_business_details1?id='+response[i].bw_id+'" target="blank" class="text-primary" >View</a><a href="/second_business_website?q='+response[i].bw_id+'" class="text-primary">Edit</a><a href="javascript:void(0);" title="Delete" data-bs-toggle="modal" data-bs-target="#delete_modal3" class="text-danger" id="delete_row" onClick="getRowsDelete3();">Delete</a></div></td></tr>');
+      }
+    },
+    error: function (request, error) {
+      console.error(error);
+    },
+    complete: function () {
+
+    },
+  });
+
+}
+
+getBusinessWebsite2Data();
+
+
+
+function getRowsDelete() {
+  $("#tableData1 tr").click(function () {
+    var currentRow = $(this).closest("tr");
+    var lclID = currentRow.find("td:eq(1)").text();
+    // alert(lclID);
+    $("#delete_id").val(lclID);
+
+  });
+}
+
+function getRowsDelete1() {
+  $("#tableData2 tr").click(function () {
+    var currentRow = $(this).closest("tr");
+    var lclID = currentRow.find("td:eq(1)").text();
+    // alert(lclID);
+    $("#delete_id").val(lclID);
+
+  });
+}
+
+
+function getRowsDelete2() {
+  $("#tableData3 tr").click(function () {
+    var currentRow = $(this).closest("tr");
+    var lclID = currentRow.find("td:eq(1)").text();
+    // alert(lclID);
+    $("#delete_id").val(lclID);
+
+  });
+}
+
+function getRowsDelete3() {
+  $("#tableData4 tr").click(function () {
+    var currentRow = $(this).closest("tr");
+    var lclID = currentRow.find("td:eq(1)").text();
+    // alert(lclID);
+    $("#delete_id").val(lclID);
+
+  });
+}
+
+
+
+  //Delete work step
+  $(document).on("click", "#btn_delete", function () {
+
+    var formData = new FormData();
+    formData.append("id", $("#delete_id").val());
+    formData.append("csrfmiddlewaretoken", $('input[name=csrfmiddlewaretoken]').val());
+    formData.append("action", "delete");
+
+
+    // var table = $("#dataTables-example").DataTable();
+
+    $.ajax({
+      beforeSend: function () {
+        $(".btn .spinner-border").show();
+      },
+
+      url: "/delete_user_personal_website/",
+      type: "POST",
+      data: formData,
+      processData: false,
+      contentType: false,
+      success: function () {
+        alert("Details deleted succesfully");
+        location.reload();
+        table.ajax.reload();
+        $("#delete_modal").modal('hide');
+      },
+      error: function (request, error) {
+        console.error(error);
+      },
+      complete: function () {
+        $(".btn .spinner-border").hide();
+        // Reset Form
+        //$("#view_field_form")[0].reset();
+        $(".close").click();
+      },
+    });
+  });
+
+    $(document).on("click", "#btn_delete1", function () {
+
+    var formData = new FormData();
+    formData.append("id", $("#delete_id").val());
+    formData.append("csrfmiddlewaretoken", $('input[name=csrfmiddlewaretoken]').val());
+    formData.append("action", "delete");
+
+
+    // var table = $("#dataTables-example").DataTable();
+
+    $.ajax({
+      beforeSend: function () {
+        $(".btn .spinner-border").show();
+      },
+
+      url: "/delete_user_personal_website/",
+      type: "POST",
+      data: formData,
+      processData: false,
+      contentType: false,
+      success: function () {
+        alert("Details deleted succesfully");
+        location.reload();
+        table.ajax.reload();
+        $("#delete_modal").modal('hide');
+      },
+      error: function (request, error) {
+        console.error(error);
+      },
+      complete: function () {
+        $(".btn .spinner-border").hide();
+        // Reset Form
+        //$("#view_field_form")[0].reset();
+        $(".close").click();
+      },
+    });
+  });
+
+
+    $(document).on("click", "#btn_delete2", function () {
+
+    var formData = new FormData();
+    formData.append("id", $("#delete_id").val());
+    formData.append("csrfmiddlewaretoken", $('input[name=csrfmiddlewaretoken]').val());
+    formData.append("action", "delete");
+
+
+    // var table = $("#dataTables-example").DataTable();
+
+    $.ajax({
+      beforeSend: function () {
+        $(".btn .spinner-border").show();
+      },
+
+      url: "/delete_user_business_website/",
+      type: "POST",
+      data: formData,
+      processData: false,
+      contentType: false,
+      success: function () {
+        alert("Details deleted succesfully");
+        location.reload();
+        table.ajax.reload();
+        $("#delete_modal").modal('hide');
+      },
+      error: function (request, error) {
+        console.error(error);
+      },
+      complete: function () {
+        $(".btn .spinner-border").hide();
+        // Reset Form
+        //$("#view_field_form")[0].reset();
+        $(".close").click();
+      },
+    });
+  });
+
+
+
+
+    $(document).on("click", "#btn_delete3", function () {
+
+    var formData = new FormData();
+    formData.append("id", $("#delete_id").val());
+    formData.append("csrfmiddlewaretoken", $('input[name=csrfmiddlewaretoken]').val());
+    formData.append("action", "delete");
+
+
+    // var table = $("#dataTables-example").DataTable();
+
+    $.ajax({
+      beforeSend: function () {
+        $(".btn .spinner-border").show();
+      },
+
+      url: "/delete_user_business_website/",
+      type: "POST",
+      data: formData,
+      processData: false,
+      contentType: false,
+      success: function () {
+        alert("Details deleted succesfully");
+        location.reload();
+        table.ajax.reload();
+        $("#delete_modal").modal('hide');
+      },
+      error: function (request, error) {
+        console.error(error);
+      },
+      complete: function () {
+        $(".btn .spinner-border").hide();
+        // Reset Form
+        //$("#view_field_form")[0].reset();
+        $(".close").click();
+      },
+    });
+  });
+
+
+</script>

@@ -1,0 +1,206 @@
+{% csrf_token %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Resume Website Template Free Download</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="Resume Website Template Free Download" name="keywords">
+        <meta content="Resume Website Template Free Download" name="description">
+
+        <!-- Favicon -->
+        <link href="img/favicon.ico" rel="icon">
+
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:300;400;600;700;800&display=swap" rel="stylesheet">
+
+        <!-- CSS Libraries -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link href="/static/web/resume2/lib/slick/slick.css" rel="stylesheet">
+        <link href="/static/web/resume2/lib/slick/slick-theme.css" rel="stylesheet">
+        <link href="/static/web/resume2/lib/lightbox/resume2/css/lightbox.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="/static/web/resume2/css/style.css" rel="stylesheet">
+    </head>
+
+    <body data-spy="scroll" data-target=".navbar" data-offset="51">
+
+        <input type="hidden" id="txtID" value="{{request.GET.id}}">
+
+        <div class="wrapper">
+            <div class="sidebar-content"></div>
+            <div class="content">
+                
+                <!-- About Start -->
+                <div class="about" id="about">
+                    <div class="content-inner">
+                        <div class="content-header">
+                            <h2>About Me</h2>
+                        </div>
+                        <div class="row align-items-center">
+                            <div class="col-md-6 col-lg-3">
+                                <img src="/static/web/resume2/img/review-4.jpg" alt="Image" id="image">
+                            </div>
+                            <div class="col-md-6 col-lg-7">
+                                 <p id="name">Poonam Marath</p>
+                                    <p id="aboutPerson">Web Designer & Developer</p>
+                                    <p><a href="mailto:info@example.com" id="email">info@example.com</a></p>
+                                    <p><a href="tel:+1234567890" id="phone">+123-456-7890</a></p>
+                                    <p id="address">123 Street, dvg, KA, India</p>
+                                    
+                                <!-- <p>
+                                   I am Poonam N from Bengalore, I am a dedependable person whi is great at time management.
+                                </p> -->
+                                <!-- <a class="btn" href="#">Hire Me</a> -->
+                            </div>
+                        </div>
+                       
+                  <div class="content-header mt-5">
+                            <h2>Education</h2>
+                        </div>
+                        <div class="row align-items-center">
+                            <div class="col-md-6">
+                                <div class="edu-col">
+                                    <!-- <span>01-Jan-2020 <i>to</i> 31-Dec-2050</span> -->
+                                    <h3 id="education1">Master Degree</h3>
+                                   
+                                </div>
+                            </div>
+                           
+                            <div class="col-md-6">
+                                <div class="edu-col">
+                                    <!-- <span>01-Jan-2020 <i>to</i> 31-Dec-2050</span> -->
+                                    <h3 id="education2">High School</h3>
+                                    <!-- <p>Lorem ipsum dolor sit amet elit suscipit orci. Donec molestie velit id libero.</p> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content-header mt-5">
+                            <h2>Experience</h2>
+                        </div>
+                        <div class="row align-items-center">
+                            
+                            <div class="col-md-6">
+                                <div class="exp-col">
+                                    <!-- <span>01-Jan-2020 <i>to</i> 31-Dec-2050</span> -->
+                                    <!-- <h3>Soft Solution Ltd</h3> -->
+                                    <!-- <h4>San Francisco, CA</h4> -->
+                                    <!-- <h5>Web Developer</h5> -->
+                                    <p id="education3">Developing and designing websites,mobile apps,and other digital products.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="exp-col">
+                           <!--          <span>01-Jan-2020 <i>to</i> 31-Dec-2050</span>
+                                    <h3>ABC Soft Ltd</h3>
+                                    <h4>San Francisco, CA</h4>
+                                    <h5>Web Designer</h5> -->
+                                    <p id="education4">I have worked with many web design companies and they are by far the most skilled and professional I have encountered.</p>
+                                </div>
+                            </div>
+                           
+                        </div>
+                            <div class="content-header mt-5">
+                            <h2>Contact</h2>
+                        </div>
+                        <div class="row align-items-center">
+                            <div class="col-md-6">
+                                <div class="contact-info">
+                                    <p><i class="fa fa-user"></i><span id="name1">Michael Miller</span></p>
+                                    <p><i class="fa fa-tag"></i><span id="info1">Web Designer & Developer</span></p>
+                                    <p><i class="fa fa-envelope"></i><a href="mailto:info@example.com" id="email1">info@example.com</a></p>
+                                    <p><i class="fa fa-phone"></i><a href="tel:+1234567890" id="phone1">+123-456-7890</a></p>
+                                    <p><i class="fa fa-map-marker"></i><span id="address1">123 Street, dvg, KA, India</span></p>
+                                    
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form">
+                                   
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Contact End -->
+            </div>
+        </div>
+        
+        <!-- Back to Top -->
+        <a href="#" class="back-to-top"><i class="fa fa-angle-double-up"></i></a>
+        
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src="/static/web/resume2/lib/easing/easing.min.js"></script>
+        <script src="/static/web/resume2/lib/slick/slick.min.js"></script>
+        <script src="/static/web/resume2/lib/typed/typed.min.js"></script>
+        <script src="/static/web/resume2/lib/waypoints/waypoints.min.js"></script>
+        <script src="/static/web/resume2/lib/isotope/isotope.pkgd.min.js"></script>
+        <script src="/static/web/resume2/lib/lightbox/js/lightbox.min.js"></script>
+        
+        <!-- Template Javascript -->
+        <script src="/static/web/resume2/js/main.js"></script>
+    </body>
+</html>
+<script type="text/javascript">
+
+    resumeDetails1();
+    function resumeDetails1() {
+
+    let formData = new FormData();
+    formData.append("csrfmiddlewaretoken", $('input[name=csrfmiddlewaretoken]').val());
+  
+    formData.append("id", $("#txtID").val());
+
+    $.ajax({
+        beforeSend: function () {
+          $(".btn .spinner-border").show();
+          $("#btn_submit").attr("disabled", true);
+        },
+        url: "/resume_details_ajax2/",
+        type: "POST",
+        data: formData,
+        processData: false,
+        contentType: false,
+        success: function (response) {
+          $("#name").text(response[0].re_name);
+          $("#aboutPerson").text(response[0].re_about);
+          $("#email").text(response[0].re_email);
+          $("#info").text(response[0].re_about);
+          $("#phone").text(response[0].re_phone);
+          $("#address").text(response[0].re_address);
+
+          $("#name1").text(response[0].re_name);
+          $("#aboutPerson1").text(response[0].re_about);
+          $("#email1").text(response[0].re_email);
+          $("#info1").text(response[0].re_about);
+          $("#phone1").text(response[0].re_phone);
+          $("#address1").text(response[0].re_address);
+
+
+
+          $("#education1").text(response[0].re_education1);
+          $("#education2").text(response[0].re_education2);
+          $("#education3").text(response[0].re_education3);
+          $("#education4").text(response[0].re_education4);
+          $("#experience1").text(response[0].re_experience1);
+          $("#experience2").text(response[0].re_experience2);
+          $("#experience3").text(response[0].re_experience3);
+          $("#experience4").text(response[0].re_experience4);
+        },
+        error: function (request, error) {
+          console.error(error);
+        },
+        complete: function () {
+          $(".btn .spinner-border").hide();
+          $("#btn_submit").attr("disabled", false);
+        },
+      });
+}
+
+</script>
+

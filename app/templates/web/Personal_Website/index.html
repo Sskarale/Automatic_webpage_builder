@@ -1,0 +1,509 @@
+{% csrf_token %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal webiste</title>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+  <link rel="stylesheet" href="/static/web/Personal_Website/css/style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+  <script src="/static/web/Personal_Website/js/scripts.js"></script>
+</head>
+<style type="text/css">
+  .dwn-btn{
+       /* padding-top:10px;
+        padding-bottom: 10px;*/
+        padding: 10px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        background-color: black;
+        color: white;
+  }
+</style>
+<body>
+  <!-- Navbar -->
+        <input type="hidden" id="txtID" value="{{request.GET.id}}">
+  
+  <nav class="navbar">
+    <div class="inner-width">
+      <a href="/" class="logo"></a>
+      <button class="menu-toggler">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="navbar-menu">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Home -->
+  <section id="home">
+    <div class="inner-width">
+      <div class="content">
+        <h1>Hi I'm <span id="designation1">Developer</span></h1>
+        <div class="sm">
+          <a href="#" class="fab fa-facebook-f"></a>
+          <a href="#" class="fab fa-twitter"></a>
+          <a href="#" class="fab fa-instagram"></a>
+          <a href="#" class="fab fa-linkedin-in"></a>
+          <a href="#" class="fab fa-youtube"></a>
+        </div>
+        <div class="buttons text-center">
+          <a href="#">Contact me</a>
+          <!-- <a href="#">Download CV</a> -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Home -->
+  <section id="about">
+    <div class="inner-width">
+      <h1 class="section-title">About</h1>
+      <div class="about-content">
+        <img src="/static/web/Personal_Website/images/pic.png" alt="" class="about-pic">
+        <div class="about-text">
+          <h2 id="userName">Hi! I'm Darkcode</h2>
+          <h3>
+            <span id="txtDesignation1">Developer</span>
+            <span id="designation2">Designer</span>
+            <span id="designation3">Youtuber</span>
+          </h3>
+          <p id="about_content">
+            This one-page website contains everything fans and stand-up aficionados need to know about this New York-based comedian. To start things off, we’re met with a large photo of Aaron, accompanied by his name and profession.
+            The site keeps up-to-date with a list of Aaron’s upcoming shows, allowing visitors to easily reserve their spot using an online booking system. Also on this personal website are some of Aaron’s humoristic videos and an Instagram Feed, letting his entertaining content take center stage.
+          </p>
+        </div>
+      </div>
+
+      <div class="skills">
+        <div class="skill">
+          <div class="skill-info">
+            <span id="skill1">HTML</span>
+            <!-- <span>90%</span> -->
+          </div>
+          <div class="skill-bar html"></div>
+        </div>
+
+        <div class="skill">
+          <div class="skill-info">
+            <span id="skill2">CSS</span>
+            <!-- <span>80%</span> -->
+          </div>
+          <div class="skill-bar css"></div>
+        </div>
+
+        <div class="skill">
+          <div class="skill-info">
+            <span id="skill3">Javascript</span>
+            <!-- <span>70%</span> -->
+          </div>
+          <div class="skill-bar js"></div>
+        </div>
+
+        <div class="skill">
+          <div class="skill-info">
+            <span id="skill4">PHP</span>
+            <!-- <span>60%</span> -->
+          </div>
+          <div class="skill-bar php"></div>
+        </div>
+
+        <div class="skill">
+          <div class="skill-info">
+            <span id="skill5">MySQL</span>
+            <!-- <span>90%</span> -->
+          </div>
+          <div class="skill-bar mysql"></div>
+        </div>
+
+        <div class="skill">
+          <div class="skill-info">
+            <span id="skill6">C#</span>
+            <!-- <span>80%</span> -->
+          </div>
+          <div class="skill-bar cs"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="dark">
+    <div class="inner-width">
+      <h1 class="section-title">Services</h1>
+      <div class="services">
+        <div class="service">
+          <i class="icon fas fa-paint-brush"></i>
+          <h4 id="service1">Design</h4>
+          <!-- <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p> -->
+        </div>
+
+        <div class="service">
+          <i class="icon fas fa-pager"></i>
+          <h4 id="service2">Build Websites</h4>
+          <!-- <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p> -->
+        </div>
+
+        <div class="service">
+          <i class="icon fas fa-database"></i>
+          <h4 id="service3">Manage Databases</h4>
+          <!-- <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p> -->
+        </div>
+
+        <div class="service">
+          <i class="icon fab fa-android"></i>
+          <h4 id="service4">Android Apps</h4>
+          <!-- <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p> -->
+        </div>
+
+        <div class="service">
+          <i class="icon fas fa-credit-card"></i>
+          <h4 id="service5">Ui Design</h4>
+          <!-- <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p> -->
+        </div>
+
+        <div class="service">
+          <i class="icon fas fa-keyboard"></i>
+          <h4 id="service7">Edit Texts</h4>
+          <!-- <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p> -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section id="education">
+    <div class="inner-width">
+      <h1 class="section-title">Education & Experiences</h1>
+      <div class="time-line">
+        <div class="block">
+          <!-- <h4>2018 - 2019</h4> -->
+          <h3 id="education1">Software engineering</h3>
+          <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At expedita maiores ullam voluptatum a nulla aperiam enim eveniet adipisci ipsum.</p> -->
+        </div>
+
+        <div class="block">
+          <!-- <h4>2018 - 2019</h4> -->
+          <h3 id="education2">Software engineering</h3>
+          <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At expedita maiores ullam voluptatum a nulla aperiam enim eveniet adipisci ipsum.</p> -->
+        </div>
+
+        <div class="block">
+          <!-- <h4>2018 - 2019</h4> -->
+          <h3 id="education3">Software engineering</h3>
+          <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At expedita maiores ullam voluptatum a nulla aperiam enim eveniet adipisci ipsum.</p> -->
+        </div>
+
+        <div class="block">
+          <!-- <h4>2018 - 2019</h4> -->
+          <h3 id="experience1">Software engineering</h3>
+          <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At expedita maiores ullam voluptatum a nulla aperiam enim eveniet adipisci ipsum.</p> -->
+        </div>
+
+        <div class="block">
+          <!-- <h4>2018 - 2019</h4> -->
+          <h3 id="experience2">Software engineering</h3>
+          <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At expedita maiores ullam voluptatum a nulla aperiam enim eveniet adipisci ipsum.</p> -->
+        </div>
+
+        <div class="block">
+          <!-- <h4>2018 - 2019</h4> -->
+          <h3 id="experience3">Software engineering</h3>
+          <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At expedita maiores ullam voluptatum a nulla aperiam enim eveniet adipisci ipsum.</p> -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="inner-width">
+      <h1 class="section-title">Get in touch</h1>
+      <div class="contact-info">
+        <div class="item">
+          <i class="fas fa-mobile-alt"></i>
+          <span id="mobile">+91 9876543210</span>
+        </div>
+
+        <div class="item">
+          <i class="fas fa-envelope"></i>
+          <span id="email">email@address.com</span>
+        </div>
+
+        <div class="item">
+          <i class="fas fa-map-marker-alt"></i>
+          <span id="address">New York, United States</span>
+        </div>
+      </div>
+
+      <form action="#" class="contact-form">
+        <input type="text" class="nameZone" placeholder="Your Full Name">
+        <input type="email" class="emailZone" placeholder="Your Email">
+        <input type="text" class="subjectZone" placeholder="Subject">
+        <textarea class="messageZone" placeholder="Message"></textarea>
+        <input type="submit" value="Send Message" class="btn">
+      </form>
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+  <footer>
+    <div class="inner-width">
+      <div class="copyright">
+        &copy; 2020 | Created & Designed By <a href="#">darkcode</a>
+      </div>
+      <div class="sm">
+        <a href="#" class="fab fa-facebook-f"></a>
+        <a href="#" class="fab fa-twitter"></a>
+        <a href="#" class="fab fa-instagram"></a>
+        <a href="#" class="fab fa-linkedin-in"></a>
+        <a href="#" class="fab fa-youtube"></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Go Top BTN -->
+  <button class="goTop fas fa-arrow-up"></button>
+
+<!-- <div style="text-align:center;">
+   <a href="//"><button id="someID" class="dwn-btn" >Download</button></a>
+  
+</div> -->
+
+</body>
+</html>
+
+
+<script type="text/javascript">
+
+    resumeDetails1();
+    function resumeDetails1() {
+
+    let formData = new FormData();
+    formData.append("csrfmiddlewaretoken", $('input[name=csrfmiddlewaretoken]').val());
+  
+    formData.append("id", $("#txtID").val());
+
+    $.ajax({
+        beforeSend: function () {
+          $(".btn .spinner-border").show();
+          $("#btn_submit").attr("disabled", true);
+        },
+        url: "/first_personal_details_ajax1/",
+        type: "POST",
+        data: formData,
+        processData: false,
+        contentType: false,
+        success: function (response) {
+          $("#name").text(response[0].pw_name);
+
+          $("#userName").text(response[0].pw_name);
+         
+
+          $("#designation1").text(response[0].pw_designation1);
+          $("#txtDesignation1").text(response[0].pw_designation1);
+          $("#designation2").text(response[0].pw_designation2);
+          $("#designation3").text(response[0].pw_designation3);
+          $("#about_content").text(response[0].pw_about);
+          $("#skill1").text(response[0].pw_skill1);
+          $("#skill2").text(response[0].pw_skill2);
+          $("#skill3").text(response[0].pw_skill3);
+          $("#skill4").text(response[0].pw_skill4);
+          $("#skill5").text(response[0].pw_skill5);
+          $("#skill6").text(response[0].pw_skill6);
+          $("#service1").text(response[0].pw_service1);
+          $("#service2").text(response[0].pw_service2);
+          $("#service3").text(response[0].pw_service3);
+          $("#service4").text(response[0].pw_service4);
+          $("#service5").text(response[0].pw_service5);
+          $("#service7").text(response[0].pw_service6);
+
+          $("#education1").text(response[0].pw_education1);
+          $("#education2").text(response[0].pw_education2);
+          $("#education3").text(response[0].pw_education3);
+          $("#experience1").text(response[0].pw_experience1);
+          $("#experience2").text(response[0].pw_experience2);
+          $("#experience3").text(response[0].pw_experience3);
+
+          $("#mobile").text(response[0].pw_mobile);
+          $("#email").text(response[0].pw_email);
+          $("#address").text(response[0].pw_address);
+
+
+        },
+        error: function (request, error) {
+          console.error(error);
+        },
+        complete: function () {
+          $(".btn .spinner-border").hide();
+          $("#btn_submit").attr("disabled", false);
+        },
+      });
+}
+
+$("a#someID").click(function(){
+$('a#someID').attr({target: '_blank', href : 'http://localhost/directory/file.pdf'});
+
+})
+
+function getWebsiteData() {
+    // alert("Hi");
+    var formData = new FormData();
+    formData.append("csrfmiddlewaretoken", $('input[name=csrfmiddlewaretoken]').val());
+    formData.append("id",  $('#txtID').val());
+    formData.append("action", "getData");
+
+    formData.append("uniqueId", '1');
+
+
+
+    $.ajax({
+
+      url: "/get_personal_website_data/",
+      type: "POST",
+      data: formData,
+      processData: false,
+      contentType: false,
+      success: function (response) {
+
+        console.log(response);
+        // $("#dataTables-example tr:gt(0)").remove();
+        for (var i = 0; i < response.length; i++) {
+          var j = i + 1;
+
+
+          $("#txtName1").val(response[i].pw_name);
+          $("#txtDesignation1").val(response[i].pw_designation1);
+          $("#txtDesignation2").val(response[i].pw_designation2);
+          $("#txtDesignation3").val(response[i].pw_designation3);
+          $("#txtAbout").val(response[i].pw_about);
+          $("#txtSkill1").val(response[i].pw_skill1);
+          $("#txtSkill2").val(response[i].pw_skill2);
+          $("#txtSkill3").val(response[i].pw_skill3);
+          $("#txtSkill4").val(response[i].pw_skill4);
+          $("#txtSkill5").val(response[i].pw_skill5);
+          $("#txtSkill6").val(response[i].pw_skill6);
+          $("#txtService1").val(response[i].pw_service1);
+          $("#txtService2").val(response[i].pw_service2);
+          $("#txtService3").val(response[i].pw_service3);
+          $("#txtService4").val(response[i].pw_service4);
+          $("#txtService5").val(response[i].pw_service5);
+          $("#txtService6").val(response[i].pw_service6);
+          $("#txtEducation1").val(response[i].pw_education1);
+          $("#txtEducation2").val(response[i].pw_education2);
+          $("#txtEducation3").val(response[i].pw_education3);
+          $("#txtExperience1").val(response[i].pw_experience1);
+          $("#txtExperience2").val(response[i].pw_experience2);
+          $("#txtExperience3").val(response[i].pw_experience3);
+          $("#txtMobile").val(response[i].pw_mobile);
+          $("#txtEmail").val(response[i].pw_email);
+          $("#txtAddress").val(response[i].pw_address);
+
+
+
+
+        }
+      },
+      error: function (request, error) {
+        console.error(error);
+      },
+      complete: function () {
+
+      },
+    });
+
+  }
+  getWebsiteData();
+
+  if($("#txtID").val() == "") {
+    $("#btn_add").show();
+    $("#btn_update").hide();
+  } else {
+    $("#btn_add").hide();
+    $("#btn_update").show();
+  }
+
+ $("#btn_update").click(function (e) {
+   
+// alert("hello")
+  var formData = new FormData();
+  formData.append("personalWebsite", $("#personalWebsite").val());
+  formData.append("txtName1", $("#txtName1").val());
+  formData.append("txtDesignation1", $("#txtDesignation1").val());
+  formData.append("txtDesignation2", $("#txtDesignation2").val());
+  formData.append("txtDesignation3", $("#txtDesignation3").val());
+  formData.append("txtAbout", $("#txtAbout").val());
+  formData.append("txtSkill1", $("#txtSkill1").val());
+  formData.append("txtSkill2", $("#txtSkill2").val());
+  formData.append("txtSkill3", $("#txtSkill3").val());
+  formData.append("txtSkill4", $("#txtSkill4").val());
+  formData.append("txtSkill5", $("#txtSkill5").val());
+  formData.append("txtSkill6", $("#txtSkill6").val());
+  formData.append("txtService1", $("#txtService1").val());
+  formData.append("txtService2", $("#txtService2").val());
+  formData.append("txtService3", $("#txtService3").val());
+  formData.append("txtService4", $("#txtService4").val());
+  formData.append("txtService5", $("#txtService5").val());
+  formData.append("txtService6", $("#txtService6").val());
+  formData.append("txtEducation1", $("#txtEducation1").val());
+  formData.append("txtEducation2", $("#txtEducation2").val());
+  formData.append("txtEducation3", $("#txtEducation3").val());
+  formData.append("txtExperience1", $("#txtExperience1").val());
+  formData.append("txtExperience2", $("#txtExperience2").val());
+  formData.append("txtExperience3", $("#txtExperience3").val());
+  formData.append("txtMobile", $("#txtMobile").val());
+  formData.append("txtEmail", $("#txtEmail").val());
+  formData.append("txtAddress", $("#txtAddress").val());
+  formData.append("txtExperienceCount", $("#txtExperienceCount").val());
+  formData.append("txtFreelance", $("#txtFreelance").val());
+  formData.append("id", $('#txtID').val());
+
+
+  
+
+
+  formData.append("csrfmiddlewaretoken", $('input[name=csrfmiddlewaretoken]').val());
+  formData.append("action", "add");
+
+  // var table = $("#dataTables-example").DataTable();
+
+  $.ajax({
+    beforeSend: function () {
+      $(".btn .spinner-border").show();
+      $("#btn_add").attr("disabled", true);
+    },
+    url: "/personal_website1_update1/",
+    type: "POST",
+    // headers: {'X-CSRFToken': '{{ csrf_token }}'},
+    data: formData,
+    processData: false,
+    contentType: false,
+    success: function (result) {
+
+     window.open("/first_personal_details1/?id="+result[0].pw_id,'_blank');
+
+    },
+    error: function (request, error) {
+      console.error(error);
+    },
+    complete: function () {
+      $(".btn .spinner-border").hide();
+      $("#btn_add").attr("disabled", false);
+    },
+  });
+});
+
+</script>

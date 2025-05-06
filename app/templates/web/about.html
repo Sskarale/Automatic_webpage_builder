@@ -1,0 +1,256 @@
+{% csrf_token %}
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Page Builder</title>
+    <link rel="stylesheet" href="/static/web/css/Template.css">
+    <link rel="stylesheet" href="/static/web/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <div class="container-fluid " style="background: #572524;color: white;">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg" style="background: #572524;">
+                <div class="container-fluid">
+                    <a class="navbar-brand text-white text-uppercase fw-bold" href="/index/">Page Builder</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active text-white text-uppercase" aria-current="page"
+                                    href="/index/">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white text-uppercase ms-3" href="/Template/">Templates</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link text-white text-uppercase ms-3" href="/about/">About</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
+                             <li class="nav-item">
+                                <a class="nav-link text-white text-uppercase" href="/profile/" id="webProfile">Profile</a>
+                              </li>
+
+
+                             <li class="nav-item">
+                            <a class="nav-link text-white text-uppercase" href="/login/" id="webLogin">Log in</a>
+                          </li>
+
+                          <li class="nav-item">
+                            <a class="nav-link text-white text-uppercase" href="/logout/" id="webLogout">Log out</a>
+                          </li>
+
+                            <li class="nav-item">
+                                <!-- <a class="nav-link text-dark text-uppercase  btn btn-light ms-3">get started</a> -->
+                            </li>
+                        </ul>
+
+                    </div>
+
+
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!--About   -->
+    <div class="container">
+        <div class="row my-5">
+            <div class="col-sm-6 col-md-6 col-12">
+                <img src="/static/web/images/about.jpg" alt="" style="width: 550px; height:400px">
+            </div>
+            <div class="col-sm-6 col-md-6 col-12">
+                <h3 class="fw-bold">About Us</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam architecto quibusdam veniam adipisci
+                    laudantium voluptate quasi illum. Repudiandae, ipsa, consectetur id, recusandae aliquam voluptas
+                    molestias dolores rerum animi quam sapiente reiciendis quas! Quasi magni laudantium nemo ad fuga
+                    aspernatur nam minima harum fugiat, ex ducimus cumque itaque deserunt molestiae qui similique!
+                    Corporis rem dignissimos labore deleniti, vero, eligendi voluptas excepturi, consectetur nesciunt
+                    est dolor velit cum exercitationem? Libero quae, voluptatem doloremque aliquam magni laudantium
+                    ullam tempora iste voluptates nesciunt, fugit iusto! Perferendis quos iusto vitae, aperiam
+                    doloribus, neque commodi ut id natus quibusdam expedita nulla quia eius, accusantium incidunt unde.
+                    Fugiat non sint porro ipsam! Quas aliquam itaque possimus vel enim quisquam placeat quasi aliquid
+                    porro, recusandae repellendus repellat eum laborum commodi neque corporis quibusdam perspiciatis,
+                    saepe non hic esse at consectetur unde sapiente. Pariatur eaque aut repellendus nam alias architecto
+                    error quae </p>
+
+            </div>
+        </div>
+        <div class="row my-5">
+            <h3 class="text-center fw-bold my-5">Our Services</h3>
+            <div class="col-sm-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="/static/web/images/abtservice.jpeg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text fw-bold">Resumes</p>
+                        <p>Build Your Own website by entering details and download it</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="/static/web/images/abtservicevisit.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text fw-bold">Visit Crads</p>
+                        <p>Download your own personal Visiting Card</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="/static/web/images/abtserviceinvi.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text fw-bold">Invitation Cards</p>
+                        <p>Download your own visiting cards by enting the details</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+   <!-- Remove the container if you want to extend the Footer to full width. -->
+  <div class="container-fluid">
+    <!-- Footer -->
+    <footer class="text-center text-white" style="background-color: #572524">
+      <!-- Grid container -->
+      <div class="container-fluid">
+        <!-- Section: Links -->
+        <section class="mt-5" style="display:none">
+          <!-- Grid row-->
+          <div class="row text-center d-flex justify-content-center pt-5">
+            <!-- Grid column -->
+            <div class="col-md-2">
+              <h6 class="text-uppercase font-weight-bold">
+                <a href="#!" class="text-white">About us</a>
+              </h6>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-2">
+              <h6 class="text-uppercase font-weight-bold">
+                <a href="#!" class="text-white">Templates</a>
+              </h6>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-2">
+              <h6 class="text-uppercase font-weight-bold">
+                <a href="#!" class="text-white">Home</a>
+              </h6>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-2">
+              <h6 class="text-uppercase font-weight-bold">
+                <a href="#!" class="text-white">Resumes</a>
+              </h6>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-2">
+              <h6 class="text-uppercase font-weight-bold">
+                <a href="#!" class="text-white">Login</a>
+              </h6>
+            </div>
+            <!-- Grid column -->
+          </div>
+          <!-- Grid row-->
+        </section>
+        <!-- Section: Links -->
+
+        <hr class="my-5" />
+
+        <!-- Section: Text -->
+        <section class="">
+          <div class="row d-flex justify-content-center">
+            <div class="col-lg-8">
+              <p>
+              Easily print or send online
+              Create personalized cards for the people you care about.
+              Invitation Maker
+              Design beautiful invitations to download, print or send online (with RSVP) for free
+              </p>
+            </div>
+          </div>
+        </section>
+        <!-- Section: Text -->
+
+        <!-- Section: Social -->
+        <section class="text-center mb-5">
+          <a href="" class="text-white me-4">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="" class="text-white me-4">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="" class="text-white me-4">
+            <i class="fab fa-google"></i>
+          </a>
+          <a href="" class="text-white me-4">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="" class="text-white me-4">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="" class="text-white me-4">
+            <i class="fab fa-github"></i>
+          </a>
+        </section>
+        <!-- Section: Social -->
+      </div>
+      <!-- Grid container -->
+
+      <!-- Copyright -->
+      <div
+           class="text-center p-3"
+           style="background-color: rgba(0, 0, 0, 0.2)"
+           >
+        © 2022 Copyright:
+        <a class="text-white" href="/index/"
+           >Digital Card Generator</a
+          >
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+  </div>
+  <!-- End of .container -->
+    <script src="/static/web/js/script.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+
+    <script type="text/javascript" src="/static/web/js/checkSession.js"></script>
+
+</body>
+
+</html>

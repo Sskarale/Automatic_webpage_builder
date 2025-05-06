@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* FIRST CARD */
+.card {
+    width: 386px !important;
+    height: 280px !important;
+}
+
+.card-body1 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background: linear-gradient(150deg, rgb(221, 220, 220) 25%, rgb(7, 7, 7));
+
+}
+
+.left {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.left span {
+    text-transform: uppercase;
+    color: #0d5692;
+}
+.right-content {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    color: white;
+}
+
+.person {
+    background-color: #0d5692;
+    padding: 5px 0 5px 30px;
+}
+
+/* SECOND CARD */
+
+.card2 {
+    display: flex;
+}
+
+.front {
+    height: 79%;
+    width: 100%;
+    background: linear-gradient(128deg, rgba(2, 0, 36, 1) 50%, rgb(248, 248, 252) 35%, rgb(227, 247, 247) 100%);
+
+}
+
+/* THIRD CARD */
+.secondrow{
+    padding-top: 100px;
+}
+.card-body3 {
+    display: flex;
+}
+
+.bot {
+    background: linear-gradient(150deg, rgb(3, 3, 46) 25%, rgb(3, 48, 22));
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+}
+
+.card3 {
+    position: relative;
+    justify-content: center;
+    display: flex;
+    color: white;
+
+}
+
+.name3 {
+    color: white;
+    padding: 2px 0 2px 5px;
+    background-color: black;
+
+}
+
+/* FOURTH CARD */
+.logo4 {
+    background: linear-gradient(150deg, rgb(236, 236, 240) 25%, rgb(3, 48, 22));
+    border: 0px solid black;
+    border-radius: 90%;
+    width: 45%;
+    height: 60%;
+    margin-left: 5px;
+    margin-top: 3px;
+}
+
+.card-body4 {
+    color: white;
+    display: flex;
+    background: linear-gradient(150deg, rgb(17, 17, 17) 25%, rgb(17, 184, 250));
+    height: 100%;
+}
+
+.details {
+    margin-left: 30px;
+}
+
+.logo4 h5 {
+    margin-top: 30px;
+    margin-left: 8px;
+}
+/* BUTTONS */
+.btns {
+    float: right;
+    border: 1px solid black !important;
+
+}
+.btns:hover{
+    background-color: #572524 !important;
+}
+
+
+/* VISITFORM */
+.vbutton button{
+color: black;
+    border: 1px solid #572524 !important ;
+}
+.vbutton button:hover{
+background-color: #572524 !important;
+}
+.vform{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 700;
+    text-transform: capitalize;
+   
+}
+
+/*  */
+.footer{
+    background: #572524!important;
+    /* margin-top: 1000px; */
+}
+.footer p{
+    color: white!important;
+}
+
+.footer h5{
+    color: white !important;
+    font-size: 22px;
+}
+
+#btn-back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    background: #9c6463!important;
+    border: 1px solid  #9c6463!important;
+  }
+#btn-back-to-top i{
+    color: white!important;
+}
+/* end */

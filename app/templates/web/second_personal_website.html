@@ -1,0 +1,536 @@
+{% csrf_token %}
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Web Page Builder</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/static/web/css/style.css">
+</head>
+
+<body>
+
+    <input type="hidden" id="txtID" value="{{request.GET.q}}">
+    <input type="hidden" id="uniqueId" name="" value="2">
+
+
+    <div class="container-fluid pb-2" style="background: #572524;color: white;">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg" style="background: #572524;">
+                <div class="container-fluid">
+                    <a class="navbar-brand text-white text-uppercase fw-bold" href="/index/">Web Page Builder</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active text-white text-uppercase" aria-current="page"
+                                    href="/index/">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white text-uppercase ms-3" href="/Template/">Templates</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="/about/" class="nav-link text-white text-uppercase ms-3">About</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
+                            <li class="nav-item">
+                                <a class="nav-link text-white text-uppercase" href="/profile/" id="webProfile">Profile</a>
+                              </li>
+
+                          <li class="nav-item">
+                            <a class="nav-link text-white text-uppercase" href="/login/" id="webLogin">Log in</a>
+                          </li>
+
+                          <li class="nav-item">
+                            <a class="nav-link text-white text-uppercase" href="/logout/" id="webLogout">Log out</a>
+                          </li>
+
+                            <li class="nav-item">
+                                <!-- <a href="/Template/" class="nav-link text-dark text-uppercase  btn btn-light ms-3">get started</a> -->
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+     <!-- form -->
+     <div class="container invitation-form">
+        <div class="row">
+            <div class="col-md-6 col-sm-12 pt-3 d-flex align-items-center">
+                <img src="/static/web/images/secondpw.png" alt="" class="img-fluid" style="position: relative;top: -190px;">
+            </div>
+
+            <div class="col-md-6 col-sm-12">
+                <div class="pt-5 text-center">
+                    <h4>Fill the form to start designing</h4>
+                </div>
+
+                <div class="d-flex pt-4">
+                    <div class="container">
+                        <form class="row g-3" action="#" method="">
+                            <input type="hidden" id="personalWebsite" value="2">
+
+                           <div class="row">
+
+                                <div class="col-md-6 col-sm-12">
+                                    <label>Image<span class="text-danger">*</span></label>
+                                    <input type="file" class="form-control" id="selImage" placeholder="">
+                                    <input type="hidden" id="imgText">
+
+                                </div>
+
+                                <div class="col-md-6 col-sm-12">
+                                    <label for="bride" class="form-label">Name</label>
+                                    <input type="text" class="form-control" id="txtName1">
+                                </div>
+
+                                <div class="col-md-6 col-sm-12">
+                                    <label for="bride" class="form-label">Designation1</label>
+                                    <input type="text" class="form-control" id="txtDesignation1">
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6 col-sm-12">
+                                    <label for="bride" class="form-label">Designation2</label>
+                                    <input type="text" class="form-control" id="txtDesignation2">
+                                </div>
+
+                                <div class="col-md-6 col-sm-12">
+                                    <label for="bride" class="form-label">Designation3</label>
+                                    <input type="text" class="form-control" id="txtDesignation3">
+                                </div>
+                            </div>
+
+
+                            <div class="row">
+                                <div class="col-md-6 col-sm-12">
+                                    <label for="bride" class="form-label">About</label>
+                                    <input type="text " class="form-control" id="txtAbout">
+                                </div>
+
+                                 <div class="col-md-6 col-sm-12">
+                                    <label for="bride" class="form-label">Skill1</label>
+                                    <input type="text " class="form-control" id="txtSkill1">
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6 col-sm-12">
+                                    <label for="bride" class="form-label">Skill2</label>
+                                    <input type="text " class="form-control" id="txtSkill2">
+                                </div>
+
+                                 <div class="col-md-6 col-sm-12">
+                                    <label for="bride" class="form-label">Skill3</label>
+                                    <input type="text " class="form-control" id="txtSkill3">
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6 col-sm-12">
+                                    <label for="bride" class="form-label">Skill4</label>
+                                    <input type="text " class="form-control" id="txtSkill4">
+                                </div>
+
+                                 <div class="col-md-6 col-sm-12">
+                                    <label for="bride" class="form-label">Skill5</label>
+                                    <input type="text " class="form-control" id="txtSkill5">
+                                </div>
+                            </div>
+
+
+                            <div class="row">
+                                <div class="col-md-6 col-sm-12">
+                                    <label for="bride" class="form-label">Skill6</label>
+                                    <input type="text " class="form-control" id="txtSkill6">
+                                </div>
+
+                                 <div class="col-md-6 col-sm-12">
+                                    <label for="bride" class="form-label">Service1</label>
+                                    <input type="text " class="form-control" id="txtService1">
+                                </div>
+                            </div>
+
+                             <div class="row">
+                                <div class="col-md-6 col-sm-12">
+                                    <label for="bride" class="form-label">Service2</label>
+                                    <input type="text " class="form-control" id="txtService2">
+                                </div>
+
+                                 <div class="col-md-6 col-sm-12">
+                                    <label for="bride" class="form-label">Service3</label>
+                                    <input type="text " class="form-control" id="txtService3">
+                                </div>
+                            </div>
+
+                             <div class="row">
+                                <div class="col-md-6 col-sm-12">
+                                    <label for="bride" class="form-label">Service4</label>
+                                    <input type="text " class="form-control" id="txtService4">
+                                </div>
+
+                                 <div class="col-md-6 col-sm-12">
+                                    <label for="bride" class="form-label">Service5</label>
+                                    <input type="text " class="form-control" id="txtService5">
+                                </div>
+                            </div>
+
+                             <div class="row">
+                                <div class="col-md-6 col-sm-12">
+                                    <label for="bride" class="form-label">Service6</label>
+                                    <input type="text " class="form-control" id="txtService6">
+                                </div>
+
+                                 <div class="col-md-6 col-sm-12">
+                                    <label for="bride" class="form-label">Education1</label>
+                                    <input type="text " class="form-control" id="txtEducation1">
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6 col-sm-12">
+                                    <label for="bride" class="form-label">Education2</label>
+                                    <input type="text " class="form-control" id="txtEducation2">
+                                </div>
+
+                                 <div class="col-md-6 col-sm-12">
+                                    <label for="bride" class="form-label">Education3</label>
+                                    <input type="text " class="form-control" id="txtEducation3">
+                                </div>
+                            </div>
+
+                             <div class="row">
+                                <div class="col-md-6 col-sm-12">
+                                    <label for="bride" class="form-label">Experience1</label>
+                                    <input type="text " class="form-control" id="txtExperience1">
+                                </div>
+
+                                 <div class="col-md-6 col-sm-12">
+                                    <label for="bride" class="form-label">Experience2</label>
+                                    <input type="text " class="form-control" id="txtExperience2">
+                                </div>
+                            </div>
+
+                             <div class="row">
+                                <div class="col-md-6 col-sm-12">
+                                    <label for="bride" class="form-label">Experience3</label>
+                                    <input type="text " class="form-control" id="txtExperience3">
+                                </div>
+
+                                 <div class="col-md-6 col-sm-12">
+                                    <label for="bride" class="form-label">Mobile</label>
+                                    <input type="text " class="form-control" id="txtMobile">
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6 col-sm-12">
+                                    <label for="bride" class="form-label">Email</label>
+                                    <input type="text " class="form-control" id="txtEmail">
+                                </div>
+
+                                 <div class="col-md-6 col-sm-12">
+                                    <label for="bride" class="form-label">Address</label>
+                                    <input type="text " class="form-control" id="txtAddress">
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6 col-sm-12">
+                                    <label for="bride" class="form-label">Experience Count</label>
+                                    <input type="text " class="form-control" id="txtExperienceCount">
+                                </div>
+
+                                 <div class="col-md-6 col-sm-12">
+                                    <label for="bride" class="form-label">Freelance</label>
+                                    <input type="text " class="form-control" id="txtFreelance">
+                                </div>
+                            </div>
+
+
+                            <div class="d-grid gap-2">
+                                <button class="btn btn-outline-secondary mt-2 mb-4" id="btn_add">Submit</button>
+                                <button class="btn btn-outline-secondary mt-2 mb-4" type="button" id="btn_update">Update</button>
+
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--  -->
+    <!-- FOOTER -->
+    <section class="footer mt-5">
+      <div class="container">
+        <footer class="py-5">
+          <div class="row">
+            <div class="col-4 ps-5">
+              <h5 class="text-white">Get in touch</h5>
+              <ul class="nav flex-column mt-4">
+                <li class="text-white pt-2">
+                  <i class="icon fa-solid fa-location-dot text-white"></i>
+                  <span class="ps-2">Belagavi</span>
+                </li>
+                <li class="text-white pt-2">
+                  <i class="fa-solid fa-envelope"></i>
+                  <span class="ps-2">info@gmail.com</span>
+                </li>
+                <li class="text-white pt-2">
+                  <i class="icon fa-solid fa-phone text-white"></i>
+                  <span class="ps-2">+91 9876543210</span>
+                </li>
+  
+              </ul>
+            </div>
+            <div class="col-4 ps-5">
+              <h5 class="text-white">Get to know us</h5>
+              <ul class="nav flex-column mt-4">
+                <li class="nav-item mb-2"><a href="/index/" class="nav-link p-0 text-white">Home</a></li>
+                <li class="nav-item mb-2"><a href="/Template/" class="nav-link p-0 text-white">Templates</a>
+                </li>
+                <li class="nav-item mb-2"><a href="/about/" class="nav-link p-0 text-white">About Us</a></li>
+                <!-- <li class="nav-item mb-2"><a href="/contact/" class="nav-link p-0 text-white">Contact</a></li> -->
+                <!-- <li class="nav-item mb-2"><a href="/about/" class="nav-link p-0 text-white">About</a></li> -->
+              </ul>
+            </div>
+  
+            <div class="col-4 ps-5">
+              <h5 class="text-white">Templates</h5>
+              <ul class="nav flex-column mt-4">
+                <li class="nav-item mb-2"><a href="/websites/" class="nav-link p-0 text-white">Website Templates</a></li>
+                <li class="nav-item mb-2"><a href="/Visit-cards/" class="nav-link p-0 text-white">Visting Cards</a>
+                </li>
+                <li class="nav-item mb-2"><a href="/invitation/" class="nav-link p-0 text-white">Invitation Cards</a>
+                </li>
+  
+              </ul>
+            </div>
+  
+         
+          </div>
+  
+          <div class="d-flex justify-content-between py-4 my-4 border-top">
+            <p>© 2021 Company, Inc. All rights reserved.</p>
+            <ul class="list-unstyled d-flex">
+              <li class="ms-3"><a href="#" class="text-white"><i class="fa-brands fa-twitter fa-2x"></i></a>
+  
+              <li class="ms-3"><a href="#" class="text-white"><i class="fa-brands fa-instagram fa-2x"></i></a>
+  
+              <li class="ms-3"><a href="#" class="text-white"><i class="fa-brands fa-facebook fa-2x"></i></a>
+  
+            </ul>
+          </div>
+  
+          <!-- Back to top button -->
+          <button type="button" class="btn btn-danger btn-floating btn-lg" id="btn-back-to-top">
+            <i class="fas fa-arrow-up"></i>
+          </button>
+        </footer>
+  
+      </div>
+    </section>
+    <!-- FOOTER END -->
+    
+      <script src="/static/web/js/script.js"></script>
+    <!-- end -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    
+    <script src="/static/web/js/jsFirstPersonal.js"></script>
+    <script type="text/javascript" src="/static/web/js/checkSession.js"></script>
+    
+</body>
+
+</html>
+
+<script type="text/javascript">
+      function getWebsiteData() {
+    // alert("Hi");
+    var formData = new FormData();
+    formData.append("csrfmiddlewaretoken", $('input[name=csrfmiddlewaretoken]').val());
+    formData.append("id",  $('#txtID').val());
+    formData.append("action", "getData");
+
+    formData.append("uniqueId", '2');
+
+
+
+    $.ajax({
+
+      url: "/get_personal_website_data/",
+      type: "POST",
+      data: formData,
+      processData: false,
+      contentType: false,
+      success: function (response) {
+
+        console.log(response);
+        // $("#dataTables-example tr:gt(0)").remove();
+        for (var i = 0; i < response.length; i++) {
+          var j = i + 1;
+
+          $("#imgText").val(response[i].pw_image);
+          $("#txtName1").val(response[i].pw_name);
+          $("#txtDesignation1").val(response[i].pw_designation1);
+          $("#txtDesignation2").val(response[i].pw_designation2);
+          $("#txtDesignation3").val(response[i].pw_designation3);
+          $("#txtAbout").val(response[i].pw_about);
+          $("#txtSkill1").val(response[i].pw_skill1);
+          $("#txtSkill2").val(response[i].pw_skill2);
+          $("#txtSkill3").val(response[i].pw_skill3);
+          $("#txtSkill4").val(response[i].pw_skill4);
+          $("#txtSkill5").val(response[i].pw_skill5);
+          $("#txtSkill6").val(response[i].pw_skill6);
+          $("#txtService1").val(response[i].pw_service1);
+          $("#txtService2").val(response[i].pw_service2);
+          $("#txtService3").val(response[i].pw_service3);
+          $("#txtService4").val(response[i].pw_service4);
+          $("#txtService5").val(response[i].pw_service5);
+          $("#txtService6").val(response[i].pw_service6);
+          $("#txtEducation1").val(response[i].pw_education1);
+          $("#txtEducation2").val(response[i].pw_education2);
+          $("#txtEducation3").val(response[i].pw_education3);
+          $("#txtExperience1").val(response[i].pw_experience1);
+          $("#txtExperience2").val(response[i].pw_experience2);
+          $("#txtExperience3").val(response[i].pw_experience3);
+          $("#txtMobile").val(response[i].pw_mobile);
+          $("#txtEmail").val(response[i].pw_email);
+          $("#txtAddress").val(response[i].pw_address);
+        $("#txtExperienceCount").val(response[i].pw_experience_years);
+          $("#txtFreelance").val(response[i].pw_freelance);
+
+
+
+
+        }
+      },
+      error: function (request, error) {
+        console.error(error);
+      },
+      complete: function () {
+
+      },
+    });
+
+  }
+  getWebsiteData();
+
+  if($("#txtID").val() == "") {
+    $("#btn_add").show();
+    $("#btn_update").hide();
+  } else {
+    $("#btn_add").hide();
+    $("#btn_update").show();
+  }
+
+
+$("#btn_update").click(function (e) {
+
+    let formData = new FormData();
+    if($("#selImage").val() != "") {
+      let lclFile = document.getElementById("selImage");
+      lclImage = lclFile.files[0];
+      $("#imgText").val('');
+      formData.append("lclImage", lclImage);
+    }
+
+
+   
+// alert("hello")
+  
+  formData.append("imgText", $("#imgText").val());
+
+  formData.append("personalWebsite", $("#personalWebsite").val());
+  formData.append("txtName1", $("#txtName1").val());
+  formData.append("txtDesignation1", $("#txtDesignation1").val());
+  formData.append("txtDesignation2", $("#txtDesignation2").val());
+  formData.append("txtDesignation3", $("#txtDesignation3").val());
+  formData.append("txtAbout", $("#txtAbout").val());
+  formData.append("txtSkill1", $("#txtSkill1").val());
+  formData.append("txtSkill2", $("#txtSkill2").val());
+  formData.append("txtSkill3", $("#txtSkill3").val());
+  formData.append("txtSkill4", $("#txtSkill4").val());
+  formData.append("txtSkill5", $("#txtSkill5").val());
+  formData.append("txtSkill6", $("#txtSkill6").val());
+  formData.append("txtService1", $("#txtService1").val());
+  formData.append("txtService2", $("#txtService2").val());
+  formData.append("txtService3", $("#txtService3").val());
+  formData.append("txtService4", $("#txtService4").val());
+  formData.append("txtService5", $("#txtService5").val());
+  formData.append("txtService6", $("#txtService6").val());
+  formData.append("txtEducation1", $("#txtEducation1").val());
+  formData.append("txtEducation2", $("#txtEducation2").val());
+  formData.append("txtEducation3", $("#txtEducation3").val());
+  formData.append("txtExperience1", $("#txtExperience1").val());
+  formData.append("txtExperience2", $("#txtExperience2").val());
+  formData.append("txtExperience3", $("#txtExperience3").val());
+  formData.append("txtMobile", $("#txtMobile").val());
+  formData.append("txtEmail", $("#txtEmail").val());
+  formData.append("txtAddress", $("#txtAddress").val());
+  formData.append("txtExperienceCount", $("#txtExperienceCount").val());
+  formData.append("txtFreelance", $("#txtFreelance").val());
+  formData.append("id", $('#txtID').val());
+
+
+  
+
+
+  formData.append("csrfmiddlewaretoken", $('input[name=csrfmiddlewaretoken]').val());
+  formData.append("action", "add");
+
+  // var table = $("#dataTables-example").DataTable();
+
+  $.ajax({
+    beforeSend: function () {
+      $(".btn .spinner-border").show();
+      $("#btn_add").attr("disabled", true);
+    },
+    url: "/personal_website1_update/",
+    type: "POST",
+    // headers: {'X-CSRFToken': '{{ csrf_token }}'},
+    data: formData,
+    processData: false,
+    contentType: false,
+    success: function (result) {
+
+        window.open("/second_personal_details1/?id="+result[0].pw_id,'_blank');
+
+
+
+    },
+    error: function (request, error) {
+      console.error(error);
+    },
+    complete: function () {
+      $(".btn .spinner-border").hide();
+      $("#btn_add").attr("disabled", false);
+    },
+  });
+});
+</script>

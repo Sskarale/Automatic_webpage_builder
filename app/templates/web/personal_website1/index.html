@@ -1,0 +1,642 @@
+{% csrf_token %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>FreeFolio - Freelancer Portfolio Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    <link href="/static/web/personal_website1/img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet"> 
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <!-- Libraries Stylesheet -->
+    <link href="/static/web/personal_website1/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="/static/web/personal_website1/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="/static/web/personal_website1/css/style.css" rel="stylesheet">
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="51">
+        <input type="hidden" id="txtID" value="{{request.GET.id}}">
+    
+    <!-- Navbar Start -->
+    <nav class="navbar fixed-top shadow-sm navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-lg-5">
+        <a href="index.html" class="navbar-brand ml-lg-3">
+            <h1 class="m-0 display-5"><span class="text-primary">Free</span>Folio</h1>
+        </a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse px-lg-3" id="navbarCollapse">
+            <div class="navbar-nav m-auto py-0">
+                <a href="#home" class="nav-item nav-link active">Home</a>
+                <a href="#about" class="nav-item nav-link">About</a>
+                <a href="#qualification" class="nav-item nav-link">Education</a>
+                <!-- <a href="#skill" class="nav-item nav-link">Skill</a> -->
+                <a href="#service" class="nav-item nav-link">Service</a>
+                <!-- <a href="#portfolio" class="nav-item nav-link">Portfolio</a> -->
+                <!-- <a href="#testimonial" class="nav-item nav-link">Review</a> -->
+                <a href="#contact" class="nav-item nav-link">Contact</a>
+            </div>
+            <a href="" class="btn btn-menu d-none d-lg-block" style="background-color:#457efa; color: #ffffff;">Hire Me</a>
+        </div>
+    </nav>
+    
+    <!-- Navbar End -->
+
+ 
+
+    <!-- Header Start -->
+    <div class="container-fluid bg-primary d-flex align-items-center mb-5 py-5" id="home" style="min-height: 100vh;">
+        <div class="container">
+            <div class="row align-items-center">
+               
+                <div class="col-lg-7 text-center text-lg-left">
+                    <h3 class="text-white font-weight-normal mb-3">Hello, my name</h3>
+                    <h1 class="display-3 text-uppercase text-primary mb-2" style="-webkit-text-stroke: 4px #ffffff;" id="name">Alaxe Smith</h1>
+                    <h1 class="typed-text-output d-inline font-weight-lighter text-white"></h1>
+                    <div class="typed-text d-none"><span id="designation1">Web Designer</span>, <span id="designation2">Web Developer</span>,<span id="designation3"> Front End Developer,</span></div>
+                  <!--   <div class="d-flex align-items-center justify-content-center justify-content-lg-start pt-5">
+                        <a href="" class="btn btn-white mr-4">Download CV</a>
+                        
+                        <a href="" class="btn btn-blue d-none d-sm-block">Play Video</a>
+                    </div> -->
+                </div>
+                <div class="col-lg-6 px-8 pl-lg-0 pb-5 pb-lg-4 about-img">
+                    <img class="img-fluid w-100 rounded-circle shadow-sm" src="/static/web/personal_website1/img/profile.png" alt="" id="website_img">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+
+
+    <!-- About Start -->
+    <div class="container-fluid py-5" id="about">
+        <div class="container">
+            <div class="position-relative d-flex align-items-center justify-content-center">
+                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">About</h1>
+                <h1 class="position-absolute text-uppercase text-primary">About Me</h1>
+            </div>
+            <div class="row align-items-center" >
+                <div class="col-lg-5 pb-4 pb-lg-0">
+                    <img class="img-fluid rounded w-100 " src="/static/web/personal_website1/img/about.jpg" alt="">
+                </div>
+                <div class="col-lg-7 " id="v" style="background-image: linear-gradient(to bottom right,yellow,aqua); border-radius: 25px; padding-top: 40px; font-style: italic; padding-left: 100px; padding-bottom: 10px; ">
+                    <!-- <h3 class="mb-4" id="designation1">UI/UX Designer & Web Developer</h3> -->
+                    <p id="about_content" class="text-danger" style="font-size: 30px; padding-left: 40px;">Tempor eos dolore amet tempor dolor tempor. Dolore ea magna sit amet dolor eirmod. Eos ipsum est tempor dolor. Clita lorem kasd sed ea lorem diam ea lorem eirmod duo sit ipsum. Amet dolor stet lorem diam dolor justo et dolor dolor dolor</p>
+                    <div class="row mb-3">
+                        <div class="col-sm-6 py-2"><h6>Name: <span class="text-primary" id="userName" >Kate Winslet</span></h6></div>
+                        <div class="col-sm-6 py-2"><h6>Degree: <span class="text-primary" id="education1">Master</span></h6></div>
+                        <div class="col-sm-6 py-2"><h6>Experience: <span class="text-primary" id="experiencecount">10 Years</span></h6></div>
+                        <div class="col-sm-6 py-2"><h6>Phone: <span class="text-primary" id="phone">+012 345 6789</span></h6></div>
+                        <div class="col-sm-6 py-2"><h6>Email: <span class="text-primary" id="email">info@example.com</span></h6></div>
+                        <div class="col-sm-6 py-2"><h6>Address: <span class="text-primary" id="address">123 Street, New York, USA</span></h6></div>
+                        <div class="col-sm-6 py-2"><h6>Freelance: <span class="text-primary" id="freelance">Available</span></h6></div>
+                    </div>
+                    <!-- <a href="" class="btn blue btn-outline-primary mr-4">Hire Me</a> -->
+                    <!-- <a href="" class="btn btn-outline-primary">Learn More</a> -->
+                </div>
+            </div>
+
+           <div class="skills pt-5">
+            <div class="position-relative d-flex align-items-center justify-content-center">
+                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Skills</h1>
+                <h1 class="position-absolute text-uppercase text-primary">My Skills</h1>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <div class="skill mb-4">
+                        <div class="d-flex justify-content-between">
+                            <h6 class="font-weight-bold " id="skill1">HTML</h6>
+                            <!-- <h6 class="font-weight-bold">95%</h6> -->
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                    <div class="skill mb-4">
+                        <div class="d-flex justify-content-between">
+                            <h6 class="font-weight-bold" id="skill2">CSS</h6>
+                            <!-- <h6 class="font-weight-bold">85%</h6> -->
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                    <div class="skill mb-4">
+                        <div class="d-flex justify-content-between">
+                            <h6 class="font-weight-bold" id="skill3">PHP</h6>
+                            <!-- <h6 class="font-weight-bold">90%</h6> -->
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="skill mb-4">
+                        <div class="d-flex justify-content-between">
+                            <h6 class="font-weight-bold" id="skill4">Javascript</h6>
+                            <!-- <h6 class="font-weight-bold">90%</h6> -->
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                    <div class="skill mb-4">
+                        <div class="d-flex justify-content-between">
+                            <h6 class="font-weight-bold" id="skill5">Angular JS</h6>
+                            <!-- <h6 class="font-weight-bold">95%</h6> -->
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar bg-dark" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                    <div class="skill mb-4">
+                        <div class="d-flex justify-content-between">
+                            <h6 class="font-weight-bold" id="skill6">Wordpress</h6>
+                            <!-- <h6 class="font-weight-bold">85%</h6> -->
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar bg-info" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+
+    <!-- Qualification Start -->
+    <div class="container-fluid py-5" id="qualification">
+        <div class="container">
+            <div class="position-relative d-flex align-items-center justify-content-center">
+                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Quality</h1>
+                <h1 class="position-absolute text-uppercase text-primary">Education & Expericence</h1>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h3 class="mb-4">My Education</h3>
+                    <div class="border-left border-primary pt-2 pl-4 ml-2">
+                        <div class="position-relative ex-me mb-4">
+                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -35px; font-size: 22px;"></i>
+                           <!--  <h5 class="font-weight-bold mb-1">Bachelor of Science</h5>
+                            <p class="mb-2"><strong>Cambridge University</strong> | <small>2005 - 2009</small></p> -->
+                            <p id="education_1">Tempor eos dolore amet tempor dolor tempor. Dolore ea magna sit amet dolor eirmod. Eos ipsum est tempor dolor. Clita lorem kasd sed ea lorem diam ea lorem eirmod duo sit ipsum stet lorem diam</p>
+                        </div>
+                        <div class="position-relative ex-me mb-4">
+                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -35px;  font-size: 22px;"></i>
+                          <!--   <h5 class="font-weight-bold mb-1">Master In CSE</h5>
+                            <p class="mb-2"><strong>Cambridge University</strong> | <small>2009 - 2011</small></p> -->
+                            <p id="education_2">Tempor eos dolore amet tempor dolor tempor. Dolore ea magna sit amet dolor eirmod. Eos ipsum est tempor dolor. Clita lorem kasd sed ea lorem diam ea lorem eirmod duo sit ipsum stet lorem diam</p>
+                        </div>
+                        <div class="position-relative ex-me mb-4">
+                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -35px;  font-size: 22px;"></i>
+                            <!-- <h5 class="font-weight-bold mb-1">IIT Kharagpur</h5>
+                            <p class="mb-2"><strong>Cambridge University</strong> | <small>2011 - 2015</small></p> -->
+                            <p id="education_3">Tempor eos dolore amet tempor dolor tempor. Dolore ea magna sit amet dolor eirmod. Eos ipsum est tempor dolor. Clita lorem kasd sed ea lorem diam ea lorem eirmod duo sit ipsum stet lorem diam</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <h3 class="mb-4">My Expericence</h3>
+                    <div class="border-left border-primary pt-2 pl-4 ml-2">
+                        <div class="position-relative ex-me mb-4">
+                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px;left: -35px;  font-size: 22px;"></i>
+                           <!--  <h5 class="font-weight-bold mb-1">Web Designer</h5>
+                            <p class="mb-2"><strong>Soft Company</strong> | <small> Excellent</small></p> -->
+                            <p id="experience1">Tempor eos dolore amet tempor dolor tempor. Dolore ea magna sit amet dolor eirmod. Eos ipsum est tempor dolor. Clita lorem kasd sed ea lorem diam ea lorem eirmod duo sit ipsum stet lorem diam</p>
+                        </div>
+                        <div class="position-relative ex-me mb-4">
+                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px;left: -35px;  font-size: 22px;"></i>
+                          <!--   <h5 class="font-weight-bold mb-1">Artificial Intelligence</h5>
+                            <p class="mb-2"><strong>Soft Company</strong> | <small> Good</small></p> -->
+                            <p id="experience2">Tempor eos dolore amet tempor dolor tempor. Dolore ea magna sit amet dolor eirmod. Eos ipsum est tempor dolor. Clita lorem kasd sed ea lorem diam ea lorem eirmod duo sit ipsum stet lorem diam</p>
+                        </div>
+                        <div class="position-relative ex-me mb-4">
+                           <!--  <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px;left: -35px;  font-size: 22px;"></i>
+                            <h5 class="font-weight-bold mb-1">Web Development</h5>
+                            <p class="mb-2"><strong>Soft Company</strong> | <small> Excellent</small></p> -->
+                            <p id="experience3">Tempor eos dolore amet tempor dolor tempor. Dolore ea magna sit amet dolor eirmod. Eos ipsum est tempor dolor. Clita lorem kasd sed ea lorem diam ea lorem eirmod duo sit ipsum stet lorem diam</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Qualification End -->
+
+
+
+    <!-- Services Start -->
+    <div class="container-fluid pt-5" id="service">
+        <div class="container">
+            <div class="service-h4 position-relative d-flex align-items-center justify-content-center">
+                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Service</h1>
+                <h1 class="position-absolute text-uppercase text-primary">My Services</h1>
+            </div>
+            <div class="row pb-3">
+                <div class="service-box col-lg-4 col-md-6 text-center mb-5">
+                  <!--   <div class="d-flex align-items-center justify-content-center mb-4">
+                        <i class="fa fa-2x fa-laptop service-icon bg-primary text-white mr-3"></i>
+                        <h4 class="font-weight-bold m-0">Web Design</h4>
+                    </div> -->
+                    <p id="service1">Justo sit justo eos amet tempor amet clita amet ipsum eos elitr. Amet lorem lorem lorem est amet labore eirmod erat clita</p>
+                    <!-- <a class="border-bottom border-primary text-decoration-none" href="">Read More</a> -->
+                </div>
+                <div class="service-box col-lg-3 col-md-6 text-center mb-5">
+                    <!-- <div class="d-flex align-items-center justify-content-center mb-4">
+                        <i class="fa fa-2x fa-laptop-code service-icon bg-primary text-white mr-3"></i>
+                        <h4 class="font-weight-bold m-0">Development</h4>
+                    </div> -->
+                    <p id="service2">Justo sit justo eos amet tempor amet clita amet ipsum eos elitr. Amet lorem lorem</p>
+                    <!-- <a class="border-bottom border-primary text-decoration-none" href="">Read More</a> -->
+                </div>
+                <div class="service-box col-lg-4 col-md-6 text-center mb-5">
+                   <!--  <div class="d-flex align-items-center justify-content-center mb-4">
+                        <i class="fab fa-2x fa-android service-icon bg-primary text-white mr-3"></i>
+                        <h4 class="font-weight-bold m-0">Apps Design</h4>
+                    </div> -->
+                    <p id="service3">Justo sit justo eos amet tempor amet clita amet ipsum eos elitr. Amet lorem lorem lorem est amet labore eirmod erat clita</p>
+                    <!-- <a class="border-bottom border-primary text-decoration-none" href="">Read More</a> -->
+                </div>
+                <div class="service-box col-lg-4 col-md-6 text-center mb-5">
+                    <!-- <div class="d-flex align-items-center justify-content-center mb-4">
+                        <i class="fab fa-2x fa-apple service-icon bg-primary text-white mr-3"></i>
+                        <h4 class="font-weight-bold m-0">Apps Development</h4>
+                    </div> -->
+                    <p id="service4">Justo sit justo eos amet tempor amet clita amet ipsum eos elitr. Amet lorem lorem Amet lorem lorem</p>
+                    <!-- <a class="border-bottom border-primary text-decoration-none" href="">Read More</a> -->
+                </div>
+                <div class="service-box col-lg-3 col-md-6 text-center mb-5">
+                   <!--  <div class="d-flex align-items-center justify-content-center mb-4">
+                        <i class="fa fa-2x fa-search service-icon bg-primary text-white mr-3"></i>
+                        <h4 class="font-weight-bold m-0">SEO</h4>
+                    </div> -->
+                    <p id="service5">Justo sit justo eos amet tempor amet clita amet ipsum eos elitr. Amet lorem  </p>
+                    <!-- <a class="border-bottom border-primary text-decoration-none" href="">Read More</a> -->
+                </div>
+                <div class="service-box col-lg-4  col-md-7 text-center mb-5">
+                  <!--   <div class="d-flex align-items-center justify-content-center mb-4">
+                        <i class="fa fa-2x fa-edit service-icon bg-primary text-white mr-3"></i>
+                        <h4 class="font-weight-bold m-0">Content Creating</h4>
+                    </div> -->
+                    <p id="service6">Justo sit justo eos amet tempor amet clita amet ipsum eos elitr. Amet lorem lorem lorem est amet labore eirmod erat clita</p>
+                    <!-- <a class="border-bottom border-primary text-decoration-none" href="">Read More</a> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Services End -->
+
+
+    <!-- Contact Start -->
+    <div class="container-fluid py-5" id="contact">
+        <div class="container">
+            <div class="position-relative d-flex align-items-center justify-content-center">
+                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Contact</h1>
+                <h1 class="position-absolute text-uppercase text-primary">Contact Me</h1>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="contact-form text-center">
+                        <div id="success"></div>
+                        <form name="sentMessage" id="contactForm" novalidate="novalidate">
+                            <div class="form-row">
+                                <div class="control-group col-sm-6">
+                                    <input type="text" class="form-control p-4" id="name" placeholder="Your Name"
+                                        required="required" data-validation-required-message="Please enter your name" />
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="control-group col-sm-6">
+                                    <input type="email" class="form-control p-4" id="email" placeholder="Your Email"
+                                        required="required" data-validation-required-message="Please enter your email" />
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <input type="text" class="form-control p-4" id="subject" placeholder="Subject"
+                                    required="required" data-validation-required-message="Please enter a subject" />
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div class="control-group">
+                                <textarea class="form-control py-3 px-4" rows="5" id="message" placeholder="Message"
+                                    required="required"
+                                    data-validation-required-message="Please enter your message"></textarea>
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div>
+                                <button class="btn btn-outline-primary" type="submit" id="sendMessageButton">Send
+                                    Message</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contact End -->
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-primary text-white mt-5 py-1 px-sm-1 px-md-5">
+        <div class="container text-center py-5">
+            <div class="d-flex justify-content-center mb-4">
+                <a class="btn btn-light btn-social mr-2" href="#"><i class="fab fa-twitter"></i></a>
+                <a class="btn btn-light btn-social mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                <a class="btn btn-light btn-social mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a class="btn btn-light btn-social" href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="d-flex justify-content-center mb-3">
+                <a class="text-white" href="#">Privacy</a>
+                <span class="px-3">|</span>
+                <a class="text-white" href="#">Terms</a>
+                <span class="px-3">|</span>
+                <a class="text-white" href="#">FAQs</a>
+                <span class="px-3">|</span>
+                <a class="text-white" href="#">Help</a>
+            </div>
+            <p class="m-0">&copy; <a class="text-white font-weight-bold" href="#">MysteryCode</a>. All Rights Reserved. Designed by <a class="text-white font-weight-bold" href="#">Mystery Code</a>
+            </p>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Scroll to Bottom -->
+    <i class="fa fa-2x fa-angle-down text-white scroll-to-bottom"></i>
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-outline-dark px-0 back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/web/personal_website1/lib/typed/typed.min.js"></script>
+    <script src="/static/web/personal_website1/lib/easing/easing.min.js"></script>
+    <script src="/static/web/personal_website1/lib/waypoints/waypoints.min.js"></script>
+    <script src="/static/web/personal_website1/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="/static/web/personal_website1/lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="/static/web/personal_website1/lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="/static/web/personal_website1/mail/jqBootstrapValidation.min.js"></script>
+    <script src="/static/web/personal_website1/mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="/static/web/personal_website1/js/main.js"></script>
+</body>
+
+</html>
+
+<script type="text/javascript">
+
+    resumeDetails1();
+    function resumeDetails1() {
+
+    let formData = new FormData();
+    formData.append("csrfmiddlewaretoken", $('input[name=csrfmiddlewaretoken]').val());
+  
+    formData.append("id", $("#txtID").val());
+
+    $.ajax({
+        beforeSend: function () {
+          $(".btn .spinner-border").show();
+          $("#btn_submit").attr("disabled", true);
+        },
+        url: "/second_personal_details_ajax1/",
+        type: "POST",
+        data: formData,
+        processData: false,
+        contentType: false,
+        success: function (response) {
+            let img = response[0].pw_image.substring(3)
+            $("#website_img").attr('src',img);
+            $("#userName").text(response[0].pw_name);
+            $("#about_content").text(response[0].pw_about)
+            $("#designation1").text(response[0].pw_designation1);
+            $("#designation2").text(response[0].pw_designation2);
+            $("#designation3").text(response[0].pw_designation3);
+
+
+            $("#name").text(response[0].pw_name);
+            $("#education_1").text(response[0].pw_education1);
+
+            $("#education_2").text(response[0].pw_education2);
+            $("#education_3").text(response[0].pw_education3);
+
+
+            $("#experiencecount").text(response[0].pw_experience_years);
+            $("#phone").text(response[0].pw_mobile);
+            $("#email").text(response[0].pw_email);
+            $("#address").text(response[0].pw_address);
+            $("#freelance").text(response[0].pw_freelance);
+
+
+
+            $("#skill1").text(response[0].pw_skill1);
+            $("#skill2").text(response[0].pw_skill2);
+            $("#skill3").text(response[0].pw_skill3);
+            $("#skill4").text(response[0].pw_skill4);
+            $("#skill5").text(response[0].pw_skill5);
+            $("#skill6").text(response[0].pw_skill6);
+
+
+            $("#education1").text(response[0].pw_education1);
+            $("#education12").text(response[0].pw_education2);
+            $("#education3").text(response[0].pw_education3);
+
+            $("#service1").text(response[0].pw_service1);
+            $("#service2").text(response[0].pw_service2);
+            $("#service3").text(response[0].pw_service3);
+            $("#service4").text(response[0].pw_service4);
+            $("#service5").text(response[0].pw_service5);
+            $("#service6").text(response[0].pw_service6);
+
+
+
+
+
+            $("#experience1").text(response[0].pw_experience1);
+            $("#experience2").text(response[0].pw_experience2);
+            $("#experience3").text(response[0].pw_experience3);
+            $("#experience4").text(response[0].pw_experience4);
+        },
+        error: function (request, error) {
+          console.error(error);
+        },
+        complete: function () {
+          $(".btn .spinner-border").hide();
+          $("#btn_submit").attr("disabled", false);
+        },
+      });
+}
+
+
+
+   function getWebsiteData() {
+    // alert("Hi");
+    var formData = new FormData();
+    formData.append("csrfmiddlewaretoken", $('input[name=csrfmiddlewaretoken]').val());
+    formData.append("id",  $('#txtID').val());
+    formData.append("action", "getData");
+
+    formData.append("uniqueId", '1');
+
+
+
+    $.ajax({
+
+      url: "/get_personal_website_data/",
+      type: "POST",
+      data: formData,
+      processData: false,
+      contentType: false,
+      success: function (response) {
+
+        console.log(response);
+        // $("#dataTables-example tr:gt(0)").remove();
+        for (var i = 0; i < response.length; i++) {
+          var j = i + 1;
+
+
+          $("#txtName1").val(response[i].pw_name);
+          $("#txtDesignation1").val(response[i].pw_designation1);
+          $("#txtDesignation2").val(response[i].pw_designation2);
+          $("#txtDesignation3").val(response[i].pw_designation3);
+          $("#txtAbout").val(response[i].pw_about);
+          $("#txtSkill1").val(response[i].pw_skill1);
+          $("#txtSkill2").val(response[i].pw_skill2);
+          $("#txtSkill3").val(response[i].pw_skill3);
+          $("#txtSkill4").val(response[i].pw_skill4);
+          $("#txtSkill5").val(response[i].pw_skill5);
+          $("#txtSkill6").val(response[i].pw_skill6);
+          $("#txtService1").val(response[i].pw_service1);
+          $("#txtService2").val(response[i].pw_service2);
+          $("#txtService3").val(response[i].pw_service3);
+          $("#txtService4").val(response[i].pw_service4);
+          $("#txtService5").val(response[i].pw_service5);
+          $("#txtService6").val(response[i].pw_service6);
+          $("#txtEducation1").val(response[i].pw_education1);
+          $("#txtEducation2").val(response[i].pw_education2);
+          $("#txtEducation3").val(response[i].pw_education3);
+          $("#txtExperience1").val(response[i].pw_experience1);
+          $("#txtExperience2").val(response[i].pw_experience2);
+          $("#txtExperience3").val(response[i].pw_experience3);
+          $("#txtMobile").val(response[i].pw_mobile);
+          $("#txtEmail").val(response[i].pw_email);
+          $("#txtAddress").val(response[i].pw_address);
+
+
+
+
+        }
+      },
+      error: function (request, error) {
+        console.error(error);
+      },
+      complete: function () {
+
+      },
+    });
+
+  }
+  getWebsiteData();
+
+  if($("#txtID").val() == "") {
+    $("#btn_add").show();
+    $("#btn_update").hide();
+  } else {
+    $("#btn_add").hide();
+    $("#btn_update").show();
+  }
+
+ $("#btn_update").click(function (e) {
+   
+// alert("hello")
+  var formData = new FormData();
+  formData.append("personalWebsite", $("#personalWebsite").val());
+  formData.append("txtName1", $("#txtName1").val());
+  formData.append("txtDesignation1", $("#txtDesignation1").val());
+  formData.append("txtDesignation2", $("#txtDesignation2").val());
+  formData.append("txtDesignation3", $("#txtDesignation3").val());
+  formData.append("txtAbout", $("#txtAbout").val());
+  formData.append("txtSkill1", $("#txtSkill1").val());
+  formData.append("txtSkill2", $("#txtSkill2").val());
+  formData.append("txtSkill3", $("#txtSkill3").val());
+  formData.append("txtSkill4", $("#txtSkill4").val());
+  formData.append("txtSkill5", $("#txtSkill5").val());
+  formData.append("txtSkill6", $("#txtSkill6").val());
+  formData.append("txtService1", $("#txtService1").val());
+  formData.append("txtService2", $("#txtService2").val());
+  formData.append("txtService3", $("#txtService3").val());
+  formData.append("txtService4", $("#txtService4").val());
+  formData.append("txtService5", $("#txtService5").val());
+  formData.append("txtService6", $("#txtService6").val());
+  formData.append("txtEducation1", $("#txtEducation1").val());
+  formData.append("txtEducation2", $("#txtEducation2").val());
+  formData.append("txtEducation3", $("#txtEducation3").val());
+  formData.append("txtExperience1", $("#txtExperience1").val());
+  formData.append("txtExperience2", $("#txtExperience2").val());
+  formData.append("txtExperience3", $("#txtExperience3").val());
+  formData.append("txtMobile", $("#txtMobile").val());
+  formData.append("txtEmail", $("#txtEmail").val());
+  formData.append("txtAddress", $("#txtAddress").val());
+  formData.append("txtExperienceCount", $("#txtExperienceCount").val());
+  formData.append("txtFreelance", $("#txtFreelance").val());
+  formData.append("id", $('#txtID').val());
+
+
+  
+
+
+  formData.append("csrfmiddlewaretoken", $('input[name=csrfmiddlewaretoken]').val());
+  formData.append("action", "add");
+
+  // var table = $("#dataTables-example").DataTable();
+
+  $.ajax({
+    beforeSend: function () {
+      $(".btn .spinner-border").show();
+      $("#btn_add").attr("disabled", true);
+    },
+    url: "/personal_website1_update1/",
+    type: "POST",
+    // headers: {'X-CSRFToken': '{{ csrf_token }}'},
+    data: formData,
+    processData: false,
+    contentType: false,
+    success: function (result) {
+
+     window.open("/first_personal_details1/?id="+result[0].pw_id,'_blank');
+
+    },
+    error: function (request, error) {
+      console.error(error);
+    },
+    complete: function () {
+      $(".btn .spinner-border").hide();
+      $("#btn_add").attr("disabled", false);
+    },
+  });
+});
+
+
+</script>
